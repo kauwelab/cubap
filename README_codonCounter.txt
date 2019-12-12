@@ -1,0 +1,69 @@
+##########################
+
+
+Codon Counter
+codonCounter.py
+Created by: Justin Miller and Matt Hodgman
+Emails: jmiller@byu.edu, matthodg@byu.edu
+
+
+##########################
+
+
+Purpose: count the number occurrences of all 64 codons.
+
+
+##########################
+
+
+ARGUMENT OPTIONS:
+
+	-h	--help		show this help message and exit
+	-i 	INPUT		Input Fasta File
+	-o	OUTPUT		Output Directory
+	-p	POPULATION	Population of Current Input Fasta File
+	-k	KEYFILE		Sample to Population Key CSV File
+
+##########################
+
+
+REQUIREMENTS:
+
+codonCounter.py uses Python version 3.7
+
+Python libraries that must be installed include:
+1. sys
+2. csv
+3. argparse
+4. Bio.SeqIO,Bio.Seq,Bio.Alphabet
+5. product
+
+If any of those libraries is not currently in your Python Path, use the following command:
+pip install --user [library_name]
+to install the library to your path.
+
+
+##########################
+
+
+Input Files:
+This program requires a single fasta file
+
+Output Files:
+Output file will be written to the same directory as codonCounter.py or the output directory if provided. The file will have the same name as the input file but with the extension '.csv'
+
+
+##########################
+
+
+USAGE:
+
+The -i argument is required, followed by the input faster file. The -p or -k arguments are also required followed by their respective values in order to correctly identify the population to which the sample belongs
+
+By default, DNA sequences are expected. 
+
+Example usage:
+python3 codonCounter.py -i samples/HG00096 -p GBR -o samples_out/
+
+
+##########################
