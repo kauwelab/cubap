@@ -3,14 +3,19 @@ import argparse
 
 def formatRow(row):
     string_row = row[0] + ',' + row[1]
-    for x in range(2,66):
-        string_row += ',' + str(int(float(row[x])))
+    if args.cotrna:
+        for x in range(2,24):
+            string_row += ',' + str(int(float(row[x])))
+    else:
+        for x in range(2,66):
+            string_row += ',' + str(int(float(row[x])))
     return string_row
 
 def parseArgs():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i",help="Input CSV Files",nargs='*',action="store", dest="input", required=True)
-    parser.add_argument("-o",help="Output File Name",action="store",dest="output", required=True)
+    parser.add_argument("-i", "--input",help="Input csv Files",nargs='*',action="store", dest="input", required=True)
+    parser.add_argument("-o", "--output",help="Output File",action="store",dest="output", required=True)
+    parser.add_argument("-c", "--cotRNA",help="flag to merge co-tRNA codon pairing CSV files", action="store_true",dest="cotRNA", required=False)
     args = parser.parse_args()
     return args
 
