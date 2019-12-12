@@ -28,7 +28,7 @@ ARGUMENT OPTIONS:
 
 REQUIREMENTS:
 
-makeAllelesPopKey.py uses Python version 3.7
+makeAllelePopKey.py uses Python version 3.7
 
 Python libraries that must be installed include:
 1. csv
@@ -60,7 +60,7 @@ The -i argument is required, followed by the input CSV file. The -o argument is 
 By default, input CSV files are expected to be in the format outputted by the script SortCommonAlleles.py. 
 
 Example usage:
-python3 makeAllelesPopKey.py -i cub_data.csv -o cub_pop_data.csv
+python3 makeAllelePopKey.py -i cub_data.csv -o cub_pop_data.csv
 
 
 ##########################
