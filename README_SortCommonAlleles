@@ -1,0 +1,64 @@
+##########################
+
+
+Sort Common Alleles
+SortCommonAlleles.py
+Created by: Matt Hodgman
+Email: matthodg@byu.edu
+
+
+##########################
+
+
+Purpose: combine an reorganize all the sample codon usage bias data files based off shared alleles.
+
+
+##########################
+
+
+ARGUMENT OPTIONS:
+
+	-h	--help		show this help message and exit
+	-i 	INPUT		Input CSV Files
+	-o	OUTPUT		Output Directory/File Name
+
+##########################
+
+
+REQUIREMENTS:
+
+SortCommonAlleles.py uses Python version 3.7
+
+Python libraries that must be installed include:
+1. csv
+2. argparse
+
+If any of those libraries is not currently in your Python Path, use the following command:
+pip install --user [library_name]
+to install the library to your path.
+
+
+##########################
+
+
+Input Files:
+This program requires one or more CSV files
+
+Output Files:
+Output CSV file will be written to the same directory as SortCommonAlleles.py unless an alternate directory is included in the output CSV file name argument.
+
+
+##########################
+
+
+USAGE:
+
+The -i argument is required, followed by the input CSV file(s). The -o argument is also required, followed by the desired name of the output CSV file.
+
+By default, input CSV files are expected to be in the format outputted by the script CodonCounter.py and CodonPairingCounter.py. These CSV files have header: "Sample,Gene,Name,Codon,Count". 
+
+Example usage:
+python3 SortCommonAlleles.py -i sample_cub_files/* -o cub_data.csv
+
+
+##########################
