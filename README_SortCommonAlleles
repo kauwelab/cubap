@@ -2,7 +2,7 @@
 
 
 Sort Common Alleles
-SortCommonAlleles.py
+sortCommonAlleles.py
 Created by: Matt Hodgman
 Email: matthodg@byu.edu
 
@@ -27,7 +27,7 @@ ARGUMENT OPTIONS:
 
 REQUIREMENTS:
 
-SortCommonAlleles.py uses Python version 3.7
+sortCommonAlleles.py uses Python version 3.7
 
 Python libraries that must be installed include:
 1. csv
@@ -45,7 +45,7 @@ Input Files:
 This program requires one or more CSV files
 
 Output Files:
-Output CSV file will be written to the same directory as SortCommonAlleles.py unless an alternate directory is included in the output CSV file name argument.
+Output CSV file will be written to the same directory as sortCommonAlleles.py unless an alternate directory is included in the output CSV file name argument.
 
 
 ##########################
@@ -55,10 +55,10 @@ USAGE:
 
 The -i argument is required, followed by the input CSV file(s). The -o argument is also required, followed by the desired name of the output CSV file.
 
-By default, input CSV files are expected to be in the format outputted by the script CodonCounter.py and CodonPairingCounter.py. These CSV files have header: "Sample,Gene,Name,Codon,Count". 
+By default, input CSV files are expected to be in the format outputted by the script codonCounter.py and codonPairingCounter.py. These CSV files have header: "Sample,Gene,Name,Codon,Count". 
 
 Example usage:
-python3 SortCommonAlleles.py -i sample_cub_files/* -o cub_data.csv
+python3 sortCommonAlleles.py -i sample_cub_files/* -o cub_data.csv
 
 
 ##########################
