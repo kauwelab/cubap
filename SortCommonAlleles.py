@@ -9,17 +9,14 @@ def formatRow(row):
 
 def parseArgs():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i",help="Input csv Files",nargs='*',action="store", dest="input", required=False)
-    parser.add_argument("-o",help="Output File",action="store",dest="output", required=False)
+    parser.add_argument("-i",help="Input CSV Files",nargs='*',action="store", dest="input", required=True)
+    parser.add_argument("-o",help="Output File Name",action="store",dest="output", required=True)
     args = parser.parse_args()
     return args
 
 args = parseArgs()
 allInputFiles = args.input
-if args.output is None:
-    outFile = 'allGenesAllSamples.csv'
-else:
-    outFile = args.output
+outFile = args.output
 
 myDict = dict()
 for x in allInputFiles:
