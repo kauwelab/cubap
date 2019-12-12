@@ -14,13 +14,13 @@ def getPopCounts(index, samples):
 
 def parseArgs():
     '''
-	Argument parsing is done.
-	Required to have an input file.
-	'''
+    Argument parsing is done.
+    Required to have an input file.
+    '''
     parser = argparse.ArgumentParser()
     parser.add_argument("-i",help="Input Sorted File",action="store", dest="input", required=True)
-    parser.add_argument("-o",help="Output File Name",action="store",dest="output", required=False)
-    parser.add_argument('-k', '--keyFile', default='sampleKey.csv', help="a csv key for identifying the sample's population", required=False)
+    parser.add_argument("-o",help="Output File Name",action="store",dest="output", required=True)
+    parser.add_argument('-k', '--keyFile', default='sampleKeyPop.csv', help="a csv key for identifying the sample's population", required=False)
     args = parser.parse_args()
     return args
 
@@ -30,10 +30,7 @@ if __name__ =='__main__':
     '''
     args = parseArgs()
     inFile = args.input
-    if args.output is None:
-        outFile = 'indexPopKey.csv'
-    else:
-        outFile = args.output
+    outFile = args.output
     
     key = pd.read_csv(args.keyFile)
     popCounts = list()
