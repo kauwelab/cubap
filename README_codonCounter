@@ -19,9 +19,9 @@ Purpose: count the number occurrences of all 64 codons.
 ARGUMENT OPTIONS:
 
 	-h	--help		show this help message and exit
-	-i 	INPUT		Input Fasta File
+	-i 	INPUT		Input FastA File
 	-o	OUTPUT		Output Directory
-	-p	POPULATION	Population of Current Input Fasta File
+	-p	POPULATION	Population of Current Input FastA File
 	-k	KEYFILE		Sample to Population Key CSV File
 
 ##########################
@@ -47,10 +47,10 @@ to install the library to your path.
 
 
 Input Files:
-This program requires a single fasta file
+This program requires a single FastA file.
 
 Output Files:
-Output file will be written to the same directory as codonCounter.py or the output directory if provided. The file will have the same name as the input file but with the extension '.csv'
+Output file will be written to the same directory as codonCounter.py or the output directory if provided. The file will have the same name as the input file but with the extension '.csv'.
 
 
 ##########################
@@ -58,7 +58,7 @@ Output file will be written to the same directory as codonCounter.py or the outp
 
 USAGE:
 
-The -i argument is required, followed by the input faster file. The -p or -k arguments are also required followed by their respective values in order to correctly identify the population to which the sample belongs
+The -i argument is required, followed by the input FastA file. The -p or -k arguments are also required followed by their respective values in order to correctly identify the population to which the sample belongs.
 
 By default, DNA sequences are expected. 
 
