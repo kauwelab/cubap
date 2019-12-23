@@ -15,14 +15,15 @@ def parseArgs():
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input",help="Input csv Files",nargs='*',action="store", dest="input", required=True)
     parser.add_argument("-o", "--output",help="Output File",action="store",dest="output", required=True)
-    parser.add_argument("-c", "--cotRNA",help="flag to merge co-tRNA codon pairing CSV files", action="store_true",dest="cotRNA", required=False)
+    parser.add_argument("-c", "--cotrna",help="flag to merge co-tRNA codon pairing CSV files", action="store_true",dest="cotrna", required=False)
+    parser.add_argument("-s", "--samples",help="include sample names in output CSV", action="store_true",dest="samples",required=False)
     args = parser.parse_args()
     return args
 
 args = parseArgs()
 allInputFiles = args.input
 outFile = args.output
-
+print(args)
 myDict = dict()
 for x in allInputFiles:
     with open(x, 'r') as f:
@@ -40,10 +41,18 @@ for x in allInputFiles:
 
 with open(outFile, 'w') as csv_file:
     writer = csv.writer(csv_file)
-    writer.writerow(['Index', 'Gene', 'Name', 'Samples'] + codons)
-    i = 1
-    for key,value in myDict.items():
-        gene_row = key.split(',')
-        sampleList = str(value).replace("'",'').replace('[','').replace(']','')
-        writer.writerow([i] + gene_row[0:1] + [gene_row[1]] + [sampleList] + gene_row[2:])
-        i += 1
+    if args.samples:
+        writer.writerow(['Index', 'Gene', 'Name', 'Samples'] + codons)
+        i = 1
+        for key,value in myDict.items():
+            gene_row = key.split(',')
+            sampleList = str(value).replace("'",'').replace('[','').replace(']','')
+            writer.writerow([i] + gene_row[0:1] + [gene_row[1]] + [sampleList] + gene_row[2:])
+            i += 1
+    else:
+        writer.writerow(['Index', 'Gene', 'Name'] + codons)
+        i = 1
+        for key,value in myDict.items():
+            gene_row = key.split(',')
+            writer.writerow([i] + gene_row[0:1] + [gene_row[1]] + gene_row[2:])
+            i += 1
