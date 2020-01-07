@@ -21,6 +21,8 @@ ARGUMENT OPTIONS:
 	-h	--help		show this help message and exit
 	-i 	INPUT		Input CSV Files
 	-o	OUTPUT		Output Directory/File Name
+	-s	--samples	include sample names in output CSV
+
 
 ##########################
 
