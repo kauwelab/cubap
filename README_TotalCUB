@@ -1,0 +1,66 @@
+##########################
+
+
+Total Codon and Pairing Count Per Sample  Calculator
+TotalCUB.py
+Created by: Matt Hodgman
+Emails: matthodg@byu.edu
+
+
+##########################
+
+
+Purpose: for each sample, calculate the total number of times each codon or codon pair appears. 
+
+
+##########################
+
+
+ARGUMENT OPTIONS:
+
+	-h	--help			show this help message and exit
+	-i 	INPUT			Input FastA File
+	-o	OUTPUT			Output file name
+	-k	KEYFILE			Sample to Population Key CSV File
+	-s	--synonymousPairing	indicates to use amino acid dict instead of codon dict
+
+
+##########################
+
+
+REQUIREMENTS:
+
+TotalCUB.py uses Python version 3.7
+
+Python libraries that must be installed include:
+1. csv
+2. argparse
+3. pandas
+
+If any of those libraries is not currently in your Python Path, use the following command:
+pip install --user [library_name]
+to install the library to your path.
+
+
+##########################
+
+
+Input Files:
+This program requires one or more CSV files generated from CodonCounter.py or CodonPairingCounter.py.
+
+Output Files:
+An output file name must be supplied as an argument. The output file will be written to the same directory as TotalCUB.py or a passed directory, if provided. The resulting file will be a single CSV with a column for every amino acid or codon and a row for each sample. Each subsequent cell will contain the total number of times that the codon or amino acid occrs in the sample.
+
+
+##########################
+
+
+USAGE:
+
+The -i argument is required, followed by the input FastA file. The -o argument is required to name the output file.
+
+Example usage:
+python3 TotalCUB.py -i identical_codon_pairing_files/* -o total_identical_pairing.csv
+
+
+##########################
