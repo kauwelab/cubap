@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-i",help="Input Fasta Files",nargs='*',action="store", dest="input", required=True)
 parser.add_argument('-o', '--output', help="the name of the output file", required=True)
 parser.add_argument('-k', '--keyFile', default='sampleKeyPop.csv', help="a csv key for identifying the sample's population")
-parser.add_argument('-s', '--synonymousPairing', action='store_true', help="include this flag to calculate the total number of synonymous codon pairs", required=False)
+parser.add_argument('-c', '--cotRNAPairing', action='store_true', help="include this flag to calculate the total number of co-tRNA codon pairs", required=False)
 args = parser.parse_args()
 allInputFiles = args.input
 key = pd.read_csv(args.keyFile)
@@ -29,7 +29,7 @@ aaDict = {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'G': 0, 'H': 0,
           'I': 0, 'K': 0, 'L': 0, 'M': 0, 'N': 0, 'P': 0, 'Q': 0, 'R': 0, 
           'S': 0, 'T': 0, 'V': 0, 'W': 0, 'Y': 0, 'Z': 0}
 
-if args.synonymousPairing:
+if args.cotRNAPairing:
     numColumns = 25
     myDict = aaDict
 else:
