@@ -11,7 +11,7 @@ def parseArgs():
     parser.add_argument("-i",help="Input Fasta Files",nargs='*',action="store", dest="input", required=False)
     parser.add_argument('-o', '--output', type=str, help='the directory to which output files will be saved', required=False)
     parser.add_argument('-p', '--population', help='the population of the current sample being processed')
-    parser.add_argument('-k', '--keyFile', default='sample_population_key.csv', help="a csv key for identifying the sample's population")
+    parser.add_argument('-k', '--keyFile', default='sampleKeyPop.csv', help="a csv key for identifying the sample's population")
     parser.add_argument('--columnar', action='store_true', help='a flag to output results in a columnar csv', required=False)
     args = parser.parse_args()
     return args
@@ -197,7 +197,7 @@ if __name__ =='__main__':
     if args.population is None:
         import pandas as pd
         df_pop = pd.read_csv(args.keyFile)
-        population = df_pop[df_pop['Sample'] == sampleName.rstrip()]['Population'].to_string().split()[1]
+        population = df_pop[df_pop['Sample'] == sampleName.rstrip()]['Subpopulation'].to_string().split()[1]
     else:
         population = args.population
 
