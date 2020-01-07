@@ -22,7 +22,7 @@ ARGUMENT OPTIONS:
 	-i 	INPUT			Input FastA File
 	-o	OUTPUT			Output file name
 	-k	KEYFILE			Sample to Population Key CSV File
-	-s	--synonymousPairing	indicates to use amino acid dict instead of codon dict
+	-c	--cotRNAPairing		indicates to use amino acid dict instead of codon dict
 
 
 ##########################
