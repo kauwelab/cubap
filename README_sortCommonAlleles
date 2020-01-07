@@ -57,7 +57,7 @@ USAGE:
 
 The -i argument is required, followed by the input CSV file(s). The -o argument is also required, followed by the desired name of the output CSV file.
 
-By default, input CSV files are expected to be in the format outputted by the script codonCounter.py and codonPairingCounter.py. These CSV files have header: "Sample,Gene,Name,Codon,Count". 
+By default, input CSV files are expected to be in the format outputted by the script codonCounter.py and codonPairingCounter.py. These CSV files have header: "Sample,Gene,Name,Codon,Count" if the -s argument is passed. 
 
 Example usage:
 python3 sortCommonAlleles.py -i sample_cub_files/* -o cub_data.csv
