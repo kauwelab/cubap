@@ -23,6 +23,7 @@ ARGUMENT OPTIONS:
 	-o	OUTPUT		Output Directory
 	-p	POPULATION	Population of Current Input FastA File
 	-k	KEYFILE		Sample to Population Key CSV File
+	-c	--columnar	a flag to output results in a columnar csv
 
 ##########################
 
