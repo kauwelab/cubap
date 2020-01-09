@@ -46,7 +46,7 @@ to install the library to your path.
 
 
 Input Files:
-This program requires a single FastA file.
+This program requires one or more FASTA files.
 
 Output Files:
 Output file will be written to the same directory as codonCounter.py or the output directory if provided. The file will have the same name as the input file but with the extension '.csv'.
