@@ -33,11 +33,9 @@ REQUIREMENTS:
 codonCounter.py uses Python version 3.7
 
 Python libraries that must be installed include:
-1. sys
-2. csv
-3. argparse
-4. Bio.SeqIO,Bio.Seq,Bio.Alphabet
-5. product
+1. csv
+2. argparse
+3. Bio.SeqIO,Bio.Seq,Bio.Alphabet
 
 If any of those libraries is not currently in your Python Path, use the following command:
 pip install --user [library_name]
