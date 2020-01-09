@@ -152,9 +152,9 @@ if __name__ =='__main__':
     sampleFile = str(args.input[0])
     sampleName = sampleFile[sampleFile.find('/') + 1:]
     if args.output is None:
-        outFile = sampleName + '_base_count'
+        outFile = sampleName
     else:
-        outFile = args.output + sampleName + '_base_count'
+        outFile = args.output + sampleName
     if args.population is None:
         import pandas as pd
         df_pop = pd.read_csv(args.keyFile)
