@@ -22,6 +22,8 @@ ARGUMENT OPTIONS:
 	-i 	INPUT		Input CSV Files
 	-o	OUTPUT		Output Directory/File Name
 	-s	--samples	include sample names in output CSV
+	-c	--cotrna	merge alleles in co-tRNA CSV files
+	-n	--nucleotides	merge alleles in nucleotide composition CSV files
 
 
 ##########################
