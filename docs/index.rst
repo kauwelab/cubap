@@ -1,5 +1,5 @@
 .. CUBAP documentation master file, created by
-   sphinx-quickstart on Tue Jan 28 15:09:35 2020.
+   sphinx=quickstart on Tue Jan 28 15:09:35 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -21,11 +21,9 @@ Indices and tables
 
 
 
-Power BI Visuals Feature
-========================
 
 Codon Frequency
----------------
+===============
 
 Graphs:
 +++++++
@@ -64,19 +62,19 @@ If you have queried multiple genes or isoforms, you can view the data in two dif
 
 *Select Population*
 ###################
-Choose a super- or subpopulation to view only the codon frequency data from those populations. This will filter every graph.
+Choose a super= or subpopulation to view only the codon frequency data from those populations. This will filter every graph.
 
 *Select Codon*
 ##############
 Choose a codon of interest to view how the frequency of this codon, in the selected gene(s)/isoform(s), across all populations. This only alters the *Average Codon Frequency by Superpopulation* and *Average Frequency by Population* graphs.
 
 
-Identical Codon Pairing and Co-tRNA Codon Pairing
--------------------------------------------------
-These visuals are set up identically to the *Codon Frequency* visual except that instead of showing the frequency of each codon, the frequency of each codon pair is shown. For co-tRNA codon pairing, synonymous (but not identical!) pairs are shown by their common amino acid.
+Identical Codon Pairing and Co=tRNA Codon Pairing
+=================================================
+These visuals are set up identically to the *Codon Frequency* visual except that instead of showing the frequency of each codon, the frequency of each codon pair is shown. For co=tRNA codon pairing, synonymous (but not identical!) pairs are shown by their common amino acid.
 
 Codon Aversion
---------------
+==============
 
 Graphs:
 +++++++
@@ -87,7 +85,7 @@ This graph shows how often each codon is averted. Specifically, it is the total 
 
 *Total Number of Alleles per Superpopulation with Codon*
 ########################################################
-Across the X-axis is the codon aversion motif (all the codons that are missing in the selected gene(s)/isform(s)) and the number of alleles, per superpopulation, that are missing that codon.
+Across the X=axis is the codon aversion motif (all the codons that are missing in the selected gene(s)/isform(s)) and the number of alleles, per superpopulation, that are missing that codon.
 
 Options:
 ++++++++
@@ -112,7 +110,7 @@ This filter only applies to the *Total Number of Alleles per Subpopulation with 
 
 
 Ramp Sequences
---------------
+==============
 
 Graphs:
 +++++++
@@ -128,11 +126,11 @@ For all selected gene(s)/isoform(s), the harmonic mean of all RSCU values for ea
 Averages:
 +++++++++
 Ramp Sequence
-- RSCU: the average RSCU value for all codons in the ramp sequence, from all populations
-- Length: the average length of the ramp sequence, in number of codons, from all populations
+= RSCU: the average RSCU value for all codons in the ramp sequence, from all populations
+= Length: the average length of the ramp sequence, in number of codons, from all populations
 Entire Gene
-- RSCU: the average RSCU value for all codons in the entire gene sequence, from all populations
-- Length: the average length of the entire gene sequence, in number of codons, from all populations
+= RSCU: the average RSCU value for all codons in the entire gene sequence, from all populations
+= Length: the average length of the entire gene sequence, in number of codons, from all populations
 
 If multiple genes/isoforms are selected, these values will also be the averages of all those.
 #############################################################################################
@@ -152,7 +150,7 @@ ther use the 'CTRL' or 'command' button. You may also select all isoforms by cli
 
 
 Nucleotide Composition
-----------------------
+======================
 
 Graphs:
 +++++++
