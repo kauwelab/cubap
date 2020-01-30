@@ -11,17 +11,6 @@ Welcome to CUBAP's documentation!
    :caption: Contents:
 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
-
-
-
 Codon Frequency
 ===============
 
@@ -69,9 +58,9 @@ Choose a super= or subpopulation to view only the codon frequency data from thos
 Choose a codon of interest to view how the frequency of this codon, in the selected gene(s)/isoform(s), across all populations. This only alters the *Average Codon Frequency by Superpopulation* and *Average Frequency by Population* graphs.
 
 
-Identical Codon Pairing and Co=tRNA Codon Pairing
+Identical Codon Pairing and Co-tRNA Codon Pairing
 =================================================
-These visuals are set up identically to the *Codon Frequency* visual except that instead of showing the frequency of each codon, the frequency of each codon pair is shown. For co=tRNA codon pairing, synonymous (but not identical!) pairs are shown by their common amino acid.
+These visuals are set up identically to the *Codon Frequency* visual except that instead of showing the frequency of each codon, the frequency of each codon pair is shown. For co-tRNA codon pairing, synonymous (but not identical!) pairs are shown by their common amino acid.
 
 Codon Aversion
 ==============
