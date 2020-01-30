@@ -114,10 +114,14 @@ For all selected gene(s)/isoform(s), the harmonic mean of all RSCU values for ea
 
 Averages:
 +++++++++
+
 Ramp Sequence
+
 - RSCU: the average RSCU value for all codons in the ramp sequence, from all populations
 - Length: the average length of the ramp sequence, in number of codons, from all populations
+
 Entire Gene
+
 - RSCU: the average RSCU value for all codons in the entire gene sequence, from all populations
 - Length: the average length of the entire gene sequence, in number of codons, from all populations
 
