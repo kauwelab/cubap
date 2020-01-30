@@ -37,13 +37,13 @@ This graph shows the same information as the violin plot except individual subpo
 Options:
 ++++++++
 
-*Select Gene:*
+*Select Gene*
 ##############
 Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes. You must next select an isoform for every gene you've selected in order to view the data in the graphs. 
 
 *Select Isoform*
 ################
-Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple either use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button
+Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple either use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button.
 
 *View Options*
 ##############
@@ -51,7 +51,7 @@ If you have queried multiple genes or isoforms, you can view the data in two dif
 
 *Select Population*
 ###################
-Choose a super= or subpopulation to view only the codon frequency data from those populations. This will filter every graph.
+Choose a super- or subpopulation to view only the codon frequency data from those populations. This will filter every graph.
 
 *Select Codon*
 ##############
@@ -74,7 +74,7 @@ This graph shows how often each codon is averted. Specifically, it is the total 
 
 *Total Number of Alleles per Superpopulation with Codon*
 ########################################################
-Across the X=axis is the codon aversion motif (all the codons that are missing in the selected gene(s)/isform(s)) and the number of alleles, per superpopulation, that are missing that codon.
+Across the X-axis is the codon aversion motif (all the codons that are missing in the selected gene(s)/isform(s)) and the number of alleles, per superpopulation, that are missing that codon.
 
 Options:
 ++++++++
@@ -126,7 +126,6 @@ Entire Gene
 - Length: the average length of the entire gene sequence, in number of codons, from all populations
 
 If multiple genes/isoforms are selected, these values will also be the averages of all those.
-#############################################################################################
 
 Options:
 ++++++++
@@ -139,7 +138,7 @@ ou can query multiple genes. You must next select an isoform for every gene you'
 *Select Isoform*
 ################
 Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple ei
-ther use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button
+ther use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button.
 
 
 Nucleotide Composition
@@ -180,7 +179,7 @@ ou can query multiple genes. You must next select an isoform for every gene you'
 *Select Isoform*
 ################
 Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple ei
-ther use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button
+ther use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button.
 
 *GC Content*
 ############
