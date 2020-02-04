@@ -3,8 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+*********************************
 Welcome to CUBAP's documentation!
-=================================
+*********************************
 
 .. toctree::
    :maxdepth: 2
@@ -19,11 +20,11 @@ Graphs:
 -------
 
 *Average Codon Frequency*
-^^^^^^^^^^^^^^^^^^^^^^^^^
+#########################
 For the selected gene(s)/isoform(s), the average number of times each codon occurs across all samples.
 
 *Standard Deviation of Frequency*
-"""""""""""""""""""""""""""""""""
+#################################
 For the selected gene(s)/isoform(s), the standard deviation of the number of times each codon occurs across all samples.
 
 *Average Codon Frequency by Superpopulation*
@@ -36,7 +37,7 @@ This graph shows the same information as the violin plot except individual subpo
 
 
 Options:
-++++++++
+--------
 
 *Select Gene*
 ##############
@@ -67,7 +68,7 @@ Codon Aversion
 ==============
 
 Graphs:
-+++++++
+-------
 
 *Total Codon Aversion Across all Genes by Superpopulation*
 ##########################################################
@@ -78,7 +79,7 @@ This graph shows how often each codon is averted. Specifically, it is the total 
 Across the X-axis is the codon aversion motif (all the codons that are missing in the selected gene(s)/isform(s)) and the number of alleles, per superpopulation, that are missing that codon.
 
 Options:
-++++++++
+--------
 
 *Select Gene:*
 ##############
@@ -103,7 +104,7 @@ Ramp Sequences
 ==============
 
 Graphs:
-+++++++
+-------
 
 *Ramp Harmonic Mean RSCU by Subpopulation*
 ##########################################
@@ -114,7 +115,7 @@ For all selected gene(s)/isoform(s), the harmonic mean of all RSCU values for ea
 For all selected gene(s)/isoform(s), the harmonic mean of all RSCU values for each codon in the entire gene sequence. This is plotted in a box and whiskers plot by subpopulation.
 
 Averages:
-+++++++++
+---------
 
 Ramp Sequence
 
@@ -129,7 +130,7 @@ Entire Gene
 If multiple genes/isoforms are selected, these values will also be the averages of all those.
 
 Options:
-++++++++
+--------
 
 *Select Gene*
 #############
@@ -146,7 +147,7 @@ Nucleotide Composition
 ======================
 
 Graphs:
-+++++++
+-------
 
 *Average Nulceptide Frequency*
 ##############################
@@ -170,7 +171,7 @@ The frequency of the selected nulceotide for each subpopulation, ordered by supe
 The *Average GC Content %* is also shown. This is computed from all selected genes/isoforms and from all populations.
 
 Options:
-++++++++
+--------
 
 *Select Gene*
 #############
