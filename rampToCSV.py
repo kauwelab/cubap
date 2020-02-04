@@ -108,6 +108,10 @@ def get_gene_name(description):
         np = ''
     return geneName + np
 
+if __name__ =='__main__':
+    '''
+    Main.
+    '''
 d = dict()
 d_A = dict()
 setty = set()
