@@ -83,13 +83,11 @@ Options:
 
 *Select Gene:*
 ##############
-   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. Y
-ou can query multiple genes. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
+   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
 
 *Select Isoform*
 ################
-   Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple ei
-ther use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button
+   Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple either use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button
 
 *Compare Subpopulations*
 ########################
@@ -134,13 +132,11 @@ Options:
 
 *Select Gene*
 #############
-   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. Y
-ou can query multiple genes. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
+   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
 
 *Select Isoform*
 ################
-   Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple ei
-ther use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button.
+   Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple either use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button.
 
 
 Nucleotide Composition
@@ -167,21 +163,18 @@ Graphs:
 
 *Nucleotide Frequency by Superpopulation and Subpopulation*
 ###########################################################
-   The frequency of the selected nulceotide for each subpopulation, ordered by superpopulation.
-The *Average GC Content %* is also shown. This is computed from all selected genes/isoforms and from all populations.
+   The frequency of the selected nulceotide for each subpopulation, ordered by superpopulation. The *Average GC Content %* is also shown. This is computed from all selected genes/isoforms and from all populations.
 
 Options:
 --------
 
 *Select Gene*
 #############
-   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. Y
-ou can query multiple genes. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
+   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
 
 *Select Isoform*
 ################
-   Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple ei
-ther use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button.
+   Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple either use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button.
 
 *GC Content*
 ############
