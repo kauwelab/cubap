@@ -4,13 +4,13 @@ import pandas as pd
 import statistics
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-i", "--input", help="Input FASTA Files",nargs='*',action="store", dest="input", required=True)
+parser.add_argument("-e", "--efficiencies", help="Input FASTA Files of codon translation efficiencies as RSCU values",nargs='*',action="store", dest="input", required=True)
 parser.add_argument("-r", "--ramps", help="Input FASTA Files containing the ramp sequences",nargs='*',action="store", dest="ramps", required=False)
 parser.add_argument('-k', '--keyFile', default='sampleKeyPop.csv', help="a csv key for identifying the sample's population")
 parser.add_argument('-c', '--chart', action='store_true', help="output CSv only contains Gene Harmonic Mean RSCU, Ramp Harmonic Mean RSCU, Gene Length, Ramp Length", required=False)
 parser.add_argument('-o', '--output', help="directory to which output files are saved")
 args = parser.parse_args()
-allInputFiles = args.input
+allInputFiles = args.efficienciesf
 allRampFiles = args.ramps
 chart = args.chart
 outputDir = args.output
