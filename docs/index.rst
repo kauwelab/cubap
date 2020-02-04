@@ -14,12 +14,12 @@ Welcome to CUBAP's documentation!
 
 Codon Frequency
 ===============
-<br/><br/><br/><br/><br/>
+
 Graphs:
-+++++++
+-------
 
 *Average Codon Frequency*
-#########################
+^^^^^^^^^^^^^^^^^^^^^^^^^
 For the selected gene(s)/isoform(s), the average number of times each codon occurs across all samples.
 
 *Standard Deviation of Frequency*
