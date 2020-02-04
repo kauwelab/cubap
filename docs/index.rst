@@ -14,7 +14,7 @@ Welcome to CUBAP's documentation!
 
 Codon Frequency
 ===============
-<br><br><br><br><br>
+<br/><br/><br/><br/><br/>
 Graphs:
 +++++++
 
