@@ -189,4 +189,4 @@ Frequently Asked Questions
 ==========================
 
 *Why are some of the graphs blank?* Because these graphs compare population differences, but the selected gene(s)/isoform(s) only have one allele in the entire 1000 Genome Sample and thus do not differ at all between populations.
-*why do some of the isoforms say longest?* These are the longest isoform for that particular gene. If several different isoforms of a gene all were all equally long, then the first isoform was indicated as the longest. 
+| *why do some of the isoforms say longest?* These are the longest isoform for that particular gene. If several different isoforms of a gene all were all equally long, then the first isoform was indicated as the longest. 
