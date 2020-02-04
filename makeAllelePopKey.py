@@ -17,7 +17,7 @@ def parseArgs():
     Argument parsing is done.
     Required to have an input file.
     '''
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='make a file that holds the number of samples in each population for every allele')
     parser.add_argument("-i",help="Input Sorted File",action="store", dest="input", required=True)
     parser.add_argument("-o",help="Output File Name",action="store",dest="output", required=True)
     parser.add_argument('-k', '--keyFile', default='sampleKeyPop.csv', help="a csv key for identifying the sample's population", required=False)
