@@ -21,8 +21,9 @@ Graphs:
 
 *Average Codon Frequency*
 #########################
-::
-   For the selected gene(s)/isoform(s), the average number of times each codon occurs across all samples.
+| For the selected gene(s)/isoform(s), the average number of times each codon occurs across all samples.
+| hey
+| whats up
 
 *Standard Deviation of Frequency*
 #################################
