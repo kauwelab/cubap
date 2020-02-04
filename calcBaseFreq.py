@@ -7,7 +7,7 @@ def parseArgs():
 	Argument parsing is done.
 	Required to have an input file.
 	'''
-    parser = argparse.ArgumentParser(description='Count Codon Usage.')
+    parser = argparse.ArgumentParser(description='calculate nucleotide composition.')
     parser.add_argument("-i",help="Input Fasta Files",nargs='*',action="store", dest="input", required=False)
     parser.add_argument('-o', '--output', type=str, help='the directory to which output files will be saved', required=False)
     parser.add_argument('-p', '--population', help='the population of the current sample being processed')
