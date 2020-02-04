@@ -1,8 +1,8 @@
 ##########################
 
 
-Calculate Base Frequencies
-calcBaseFreq.py 
+Calculate Nucleotide Composition
+calculateNucleotideComposition.py 
 Created by: Matt Hodgman
 Emails: matthodg@byu.edu
 
@@ -19,7 +19,7 @@ Purpose: calculate the number of A's, T's, G's, and C's in each gene.
 ARGUMENT OPTIONS:
 
 	-h	--help		show this help message and exit
-	-i 	INPUT		Input FastA File
+	-i 	INPUT		Input FASTA File
 	-o	OUTPUT		Output Directory
 	-p	POPULATION	Population of Current Input FastA File
 	-k	KEYFILE		Sample to Population Key CSV File
@@ -62,7 +62,7 @@ The -i argument is required, followed by the input FASTA file(s). The -p or -k a
 By default, DNA sequences are expected. 
 
 Example usage:
-python3 calcBaseFreq.py -i samples/HG00096 -p GBR -o samples_out/ -c
+python3 calculateNucleotideComposition.py -i samples/HG00096 -p GBR -o samples_out/ -c
 
 
 ##########################
