@@ -10,7 +10,7 @@ parser.add_argument('-k', '--keyFile', default='sampleKeyPop.csv', help="a csv k
 parser.add_argument('-c', '--chart', action='store_true', help="output CSv only contains Gene Harmonic Mean RSCU, Ramp Harmonic Mean RSCU, Gene Length, Ramp Length", required=False)
 parser.add_argument('-o', '--output', help="directory to which output files are saved")
 args = parser.parse_args()
-allInputFiles = args.efficienciesf
+allInputFiles = args.efficiencies
 allRampFiles = args.ramps
 chart = args.chart
 outputDir = args.output
@@ -76,7 +76,7 @@ def to_csv(sample, subpopulation, superpopulation, d, d_A):
     if len(make_column_number_list(d_A)) > len(make_column_number_list(d)):
         numList = make_column_number_list(d_A)
     header = ['Sample','Subpopulation','Superpopulation'] + numList
-    with open(outputDir + sample + '_rampies.csv', 'w') as csv_file:
+    with open(outputDir + sample + '_ramp.csv', 'w') as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(header)
         for gene,ramp in d.items():
