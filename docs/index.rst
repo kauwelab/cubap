@@ -187,7 +187,7 @@ ther use the 'CTRL' or 'command' button. You may also select all isoforms by cli
 ############
    This is selected by default. It shows the *GC Content Across Populations* graph.
 
-*Nucleotide Frequenc*
+*Nucleotide Frequency*
 #####################
    Click this button to view the *Nucleotide Frequency by Superpopulation* and *Nucleotide Frequency by Superpopulation and Subpopulation* graphs.
  
@@ -196,4 +196,6 @@ Frequently Asked Questions
 ==========================
 
 *Why are some of the graphs blank?*
+| 
+| .
 | Because these graphs compare population differences, but the selected gene(s)/isoform(s) only have one allele in the entire 1000 Genome Sample and thus do not differ at all between populations.
