@@ -195,7 +195,4 @@ ther use the 'CTRL' or 'command' button. You may also select all isoforms by cli
 Frequently Asked Questions
 ==========================
 
-*Why are some of the graphs blank?*
-| 
-| .
-| Because these graphs compare population differences, but the selected gene(s)/isoform(s) only have one allele in the entire 1000 Genome Sample and thus do not differ at all between populations.
+*Why are some of the graphs blank?* Because these graphs compare population differences, but the selected gene(s)/isoform(s) only have one allele in the entire 1000 Genome Sample and thus do not differ at all between populations.
