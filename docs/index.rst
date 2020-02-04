@@ -9,11 +9,12 @@ Welcome to CUBAP's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+.. |br| raw:: html
 
 
 Codon Frequency
 ===============
-
+<br><br><br><br><br>
 Graphs:
 +++++++
 
