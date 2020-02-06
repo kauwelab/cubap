@@ -139,7 +139,10 @@ for x in allInputFiles:
                     d_A[gene] = ramp
                 else:
                     d[gene] = ramp
-        sample = x[x.find('/') + 1 :-22]
+        if x.find('.') == -1:
+	        sampleName = x[-7:]
+        else:
+	        sampleName = x[x.find('.')-7:x.find('.')]
         subpopulation = df_pop[df_pop['Sample'] == sample.rstrip()]['Subpopulation'].item()
         superpopulation = df_pop[df_pop['Sample'] == sample.rstrip()]['Superpopulation'].item()
         if chart:
