@@ -46,7 +46,10 @@ for x in allInputFiles:
             else:
                 for i in range(3,numColumns):
                     myDict[codons[i - 3]] += int(row[i])
-    sample = x[x.find('/') + 1 :-11]
+    if x.find('.') == -1:
+	sampleName = x[-7:]
+    else:
+	sampleName = x[x.find('.')-7:x.find('.')]
     d[sample] = []
     for i in range(3,numColumns):
         d[sample].append(myDict[codons[i - 3]])
