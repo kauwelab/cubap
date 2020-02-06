@@ -64,7 +64,7 @@ was passed as arguments respectively.
 
 USAGE:
 
-The -i argument is required, followed by the input faster file. The -p or -k arguments are also required followed by their respective values in order to correctly identify the population to which the sample belongs
+The -i argument is required, followed by the input FASTA file(s). These files either need to have the 7 character long sample name as the last 7 characters, or the last 7 that precede the extension that begins with '.'. The -p or -k arguments are also required followed by their respective values in order to correctly identify the population to which the sample belongs
 
 By default, DNA sequences are expected. 
 
