@@ -189,7 +189,10 @@ if __name__ =='__main__':
     CodonsDict = makeDict()
     args = parseArgs()
     sampleFile = str(args.input[0])
-    sampleName = sampleFile[sampleFile.find('/') + 1:]
+    if sampleFile.find('.') == -1:
+	sampleName = sampleFile[-7:]
+    else:
+	sampleName = sampleFile[sampleFile.find('.')-7:sampleFile.find('.')]
     if args.output is None:
         outFile = sampleName
     else:
