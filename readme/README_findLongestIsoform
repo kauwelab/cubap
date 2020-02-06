@@ -52,7 +52,7 @@ No output file is created. Longest isoform is written to std out.
 
 USAGE:
 
-The -i argument is required, followed by the input FASTA file.
+The -i argument is required, followed by the input FASTA file(s). These files either need to have the 7 character long sample name as the last 7 characters, or the last 7 that precede the extension that begins with '.'.
 
 By default, DNA sequences are expected. 
 
