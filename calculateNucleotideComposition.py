@@ -150,7 +150,10 @@ if __name__ =='__main__':
     BasesDict = {'Sample': '', 'Gene': '', 'A': 0, 'T': 0, 'G': 0, 'C': 0}
     args = parseArgs()
     sampleFile = str(args.input[0])
-    sampleName = sampleFile[sampleFile.find('/') + 1:]
+    if sampleFile.find('.') == -1:
+	sampleName = sampleFile[-7:]
+    else:
+	sampleName = sampleFile[sampleFile.find('.')-7:sampleFile.find('.')]
     if args.output is None:
         outFile = sampleName
     else:
