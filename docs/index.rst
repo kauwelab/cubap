@@ -108,9 +108,13 @@ Graphs:
 ##########################################
    For all selected gene(s)/isoform(s), the harmonic mean of all RSCU values for each codon in the ramp sequence. This is plotted in a box and whiskers plot by subpopulation.
 
-*Gene Harmonic Mean RSCU bu Subpopulation*
+*Gene Harmonic Mean RSCU by Subpopulation*
 ##########################################
    For all selected gene(s)/isoform(s), the harmonic mean of all RSCU values for each codon in the entire gene sequence. This is plotted in a box and whiskers plot by subpopulation.
+   
+*Percent Samples With Ramp*
+###########################
+   A pie chart that shows what percentage of individuals in the selected subpopulation have a ramp sequence in the selected gene.
 
 Averages:
 ---------
