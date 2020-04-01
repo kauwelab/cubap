@@ -32,7 +32,7 @@ def parseArgs():
     parser.add_argument("-c",help="Co-tRNA codon pairing",action="store_true",dest="co_trna", required=False)
     parser.add_argument("-b",help="Both Identical and Co-tRNA codon pairing",action="store_true",dest="both", required=False)
     parser.add_argument('-p', '--population', help='the population of the current sample being processed',dest="population")
-    parser.add_argument('-k', '--keyFile', default='sampleKeyPop.csv', help="a csv key for identifying the sample's population",dest="keyfile")
+    parser.add_argument('-k', '--keyFile', default='sampleKeyPop.csv', help="a csv key for identifying the sample's population",dest="keyFile")
     parser.add_argument("-l",type=str, help="Codon Table. Default: Standard",action="store",dest="codon_table", default="Standard", required=False)
     parser.add_argument('--columnar', action='store_true', help='a flag to output results in a columnar csv', required=False)
     args = parser.parse_args()
