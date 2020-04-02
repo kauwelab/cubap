@@ -41,11 +41,7 @@ Options:
 
 *Select Gene*
 ##############
-   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes. You must next select an isoform for every gene you've selected in order to view the data in the graphs. 
-
-*Select Isoform*
-################
-   Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple either use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button.
+   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. The isoform number is in parentheses next to the gene name with the longest ones marked with 'longest.' You must next select an isoform for every gene you've selected in order to view the data in the graphs.
 
 *View Options*
 ##############
@@ -81,14 +77,10 @@ Graphs:
 Options:
 --------
 
-*Select Gene:*
+*Select Gene*
 ##############
-   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
-
-*Select Isoform*
-################
-   Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple either use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button
-
+   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. The isoform number is in parentheses next to the gene name with the longest ones marked with 'longest.' You must next select an isoform for every gene you've selected in order to view the data in the graphs.
+   
 *Compare Subpopulations*
 ########################
    Click this button to view the number of alleles that are missing codons by subpopulation instead of superpopulation. This only affects the *Total Number of Alleles per Superpopulation with Codon* graph. Click the *Reset* button to view superpopulation data again.
@@ -135,13 +127,8 @@ Options:
 --------
 
 *Select Gene*
-#############
-   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
-
-*Select Isoform*
-################
-   Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple either use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button.
-
+##############
+   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. The isoform number is in parentheses next to the gene name with the longest ones marked with 'longest.' You must next select an isoform for every gene you've selected in order to view the data in the graphs.
 
 Nucleotide Composition
 ======================
@@ -173,13 +160,9 @@ Options:
 --------
 
 *Select Gene*
-#############
-   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
-
-*Select Isoform*
-################
-   Click the dropdown arrow to view all the isoforms for the gene(s) you've already selected. To select multiple either use the 'CTRL' or 'command' button. You may also select all isoforms by clicking the 'Select All' button.
-
+##############
+   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. The isoform number is in parentheses next to the gene name with the longest ones marked with 'longest.' You must next select an isoform for every gene you've selected in order to view the data in the graphs.
+   
 *GC Content*
 ############
    This is selected by default. It shows the *GC Content Across Populations* graph.
