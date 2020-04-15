@@ -41,7 +41,7 @@ Options:
 
 *Select Gene*
 ##############
-   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. The isoform number is in parentheses next to the gene name with the longest ones marked with 'longest.' You must next select an isoform for every gene you've selected in order to view the data in the graphs.
+   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. Next to the genes are the isoform numbers; the longest ones are marked. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
 
 *View Options*
 ##############
@@ -79,7 +79,7 @@ Options:
 
 *Select Gene*
 ##############
-   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. The isoform number is in parentheses next to the gene name with the longest ones marked with 'longest.' You must next select an isoform for every gene you've selected in order to view the data in the graphs.
+   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. Next to the genes are the isoform numbers; the longest ones are marked. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
    
 *Compare Subpopulations*
 ########################
@@ -128,7 +128,7 @@ Options:
 
 *Select Gene*
 ##############
-   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. The isoform number is in parentheses next to the gene name with the longest ones marked with 'longest.' You must next select an isoform for every gene you've selected in order to view the data in the graphs.
+   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. Next to the genes are the isoform numbers; the longest ones are marked. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
 
 Nucleotide Composition
 ======================
@@ -161,7 +161,7 @@ Options:
 
 *Select Gene*
 ##############
-   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. The isoform number is in parentheses next to the gene name with the longest ones marked with 'longest.' You must next select an isoform for every gene you've selected in order to view the data in the graphs.
+   Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. Next to the genes are the isoform numbers; the longest ones are marked. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
    
 *GC Content*
 ############
