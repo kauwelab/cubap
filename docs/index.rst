@@ -58,7 +58,7 @@ Options:
 
 Identical Codon Pairing and Co-tRNA Codon Pairing
 =================================================
-   These visuals are set up identically to the *Codon Frequency* visual except that instead of showing the frequency of each codon, the frequency of each codon pair is shown. For co-tRNA codon pairing, synonymous (but not identical!) pairs are shown by their common amino acid.
+   These visuals are set up identically to the *Codon Frequency* visual except that instead of showing the frequency of each codon, it shows the frequency of each codon pair. For co-tRNA codon pairing, synonymous (but not identical!) pairs are shown by their common amino acid.
 
 Codon Aversion
 ==============
@@ -68,11 +68,11 @@ Graphs:
 
 *Total Codon Aversion Across all Genes by Superpopulation*
 ##########################################################
-   This graph shows how often each codon is averted. Specifically, it is the total number of alleles, summed for each gene, in which the codon is not present. This total allele count is separated for each codon.
+   This graph shows how often each codon is averted. Specifically, it is the total number of alleles, summed for each gene, in which the codon is not present.
 
 *Total Number of Alleles per Superpopulation with Codon*
 ########################################################
-   Across the X-axis is the codon aversion motif (all the codons that are missing in the selected gene(s)/isform(s)) and the number of alleles, per superpopulation, that are missing that codon.
+   Across the x-axis the codon aversion motif (all the codons that are missing in the selected gene(s)/isform(s)) and the number of alleles, per superpopulation, that are missing that codon.
 
 Options:
 --------
