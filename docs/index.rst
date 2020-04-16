@@ -52,6 +52,10 @@ Options:
 *************************************************
 Identical Codon Pairing and Co-tRNA Codon Pairing
 *************************************************
+
+Note:
+#####
+
    These visuals are set up identically to the *Codon Frequency* visual except that instead of showing the frequency of each codon, it shows the frequency of each codon pair. For co-tRNA codon pairing, synonymous (but not identical!) pairs are shown by their common amino acid.
 
 **************
