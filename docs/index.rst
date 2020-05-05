@@ -89,12 +89,18 @@ Graphs:
 
 *Ramp Harmonic Mean RSCU by Subpopulation*
    For all selected gene(s)/isoform(s), the harmonic mean of all RSCU values for each codon in the ramp sequence. This is plotted in a box and whiskers plot by subpopulation.
+   
+*Ramp Harmonic Mean RSCU by Superpopulation*
+   For all selected gene(s)/isoform(s), the harmonic mean of all RSCU values for each codon in the ramp sequence. This is plotted in a box and whiskers plot by superpopulation.
 
 *Gene Harmonic Mean RSCU by Subpopulation*
    For all selected gene(s)/isoform(s), the harmonic mean of all RSCU values for each codon in the entire gene sequence. This is plotted in a box and whiskers plot by subpopulation.
    
+*Gene Harmonic Mean RSCU by Superpopulation*
+   For all selected gene(s)/isoform(s), the harmonic mean of all RSCU values for each codon in the entire gene sequence. This is plotted in a box and whiskers plot by superpopulation.
+   
 *Percent Samples With Ramp*
-   A pie chart that shows what percentage of individuals in the selected subpopulation have a ramp sequence in the selected gene.
+   A pie chart that shows what percentage of individuals in the selected superpopulation(s) or subpopulation(s) have a ramp sequence in the selected gene. Only populations that have at least one individual with a ramp sequence are shown.
 
 Averages:
 #########
@@ -116,6 +122,18 @@ Options:
 
 *Select Gene*
    Use the search and dropdown box features to find your gene(s) of interest. Click on the gene name to query it. You can query multiple genes by holding either the 'CTRL' or 'command' key. Next to the genes are the isoform numbers; the longest ones are marked. You must next select an isoform for every gene you've selected in order to view the data in the graphs.
+   
+*Show Superpopulation*
+   Switch the box plots to group RSCU values by superpopulation.
+   
+*Show Subpopulation*
+   Switch the box plots to group RSCU values by subpopulation.
+   
+*Pie Chart*
+   Show the frequency of individuals/samples in a population that have a ramp sequence in a pie chart.
+   
+*Table*
+   Show the frequency of individuals/samples in a population that have a ramp sequence in a table. All populations are shown.
 
 **********************
 Nucleotide Composition
