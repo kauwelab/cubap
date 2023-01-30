@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+<title>CUBAP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta name="google-site-verification" content="YHCY1MexHQbOOaLXJX8pT0vuDsbuSKPMyIUVHbRUhMU" />
+</head>
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--im adding this script to download stuuf yay-->
+<!--
+<script type="text/javascript" src="C:\inetpub\wwwroot\js\FileSaver.min.js"></script>
+<script type="text/javascript" src="C:\inetpub\wwwroot\js\jszip.min.js"></script>
+<script>
+  function downloadResults() {
+    console.log("in download results");
+    var zip = new JSZip();
+    zip.file("test.csv", "text");
+    zip.generateAsync({
+        type: "blob",
+        compression: "DEFLATE",
+        compressionOptions: {
+            //TODO let the user know that they've downloaded the file while they are waiting
+            /* compression level ranges from 1 (best speed) to 9 (best compression) */
+            level: 9
+        }
+    })
+        .then(function (content) {
+            // see FileSaver.js
+            saveAs(content, "test.zip");
+        });
+
+    var element = document.createElement('a');
+
+    var dataBlob = new Blob([text], { type: "text/plain" });
+    var objUrl = URL.createObjectURL(dataBlob);
+
+    element.href = objUrl;
+    element.download = filename;
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+
+    document.body.removeChild(element);
+}
+</script>
+-->
+<!--and this is the end of what i added-->
+<style>
+
+.whiteText {
+    color: white;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  /*background-image: url('genome.jpg');*/
+  /*background-image: url('dna-gel.jpg');*/
+  background-image: url('worldpops.png');
+  /*filter: brightness(80%);*/
+  height: 100%;
+}
+
+/* Embedded tableau */
+.tableau {
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Second image (Portal) */
+.bgimg-2 {
+  /*background-image: url("earth-at-night.jpg");*/
+  background-image: url('dna-gel.jpg');
+  min-height: 400px;
+  width: auto;
+}
+
+/* Third image (Help) */
+.bgimg-3 {
+  background-image: url("question.jpeg"); /* use a different image here :) */
+  min-height: 400px;
+  height: auto;
+  width: 100%;
+}
+
+/* Fourth image (The Lab) */
+.bgimg-4 {
+  background-image: url("wetLabDarkPic.jpg");
+  min-height: 400px;
+  width: auto;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+A:hover {color: DarkGrey;}
+
+.vizbut {
+    padding: 120px;
+    margin: 40px;
+}
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#dataPortal" class="w3-bar-item w3-button w3-hide-small">DATA PORTAL</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small">ABOUT</a>
+    <!--<a href="#help" class="w3-bar-item w3-button w3-hide-small">HELP</a>-->
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small">THE LAB</a>
+    <a href="population_stratification.html" class="w3-bar-item w3-button" onclick="toggleFunction()">STRATIFICATION</a>
+    <a href="Results.html" class="w3-bar-item w3-button" onclick="toggleFunction()">RESULTS</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#dataPortal" class="w3-bar-item w3-button" onclick="toggleFunction()">DATA PORTAL</a>
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <!--<a href="" class="w3-bar-item w3-button" onclick="toggleFunction()">HELP</a>-->
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">THE LAB</a>
+    <a href="population_stratification.html" class="w3-bar-item w3-button" onclick="toggleFunction()">STRATIFICATION</a>
+    <a href="Results.html" class="w3-bar-item w3-button" onclick="toggleFunction()">RESULTS</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <style>
+        .scroll-prompt {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  z-index: 100;
+  -moz-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+
+.scroll-prompt .scroll-prompt-shape {
+  position: relative;
+  -moz-animation: slidedown 2.25s infinite;
+  -webkit-animation: slidedown 2.25s infinite;
+  animation: slidedown 2.25s infinite;
+}
+
+.scroll-prompt .scroll-prompt-shape:before,
+.scroll-prompt .scroll-prompt-shape:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3em;
+  height: .5em;
+  top: 0;
+  left: 0;
+  background: #fff;
+  -moz-border-radius: 0 0.25em 0.25em 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 0.25em 0.25em 0;
+  -moz-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  -webkit-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+
+.scroll-prompt .scroll-prompt-shape:before {
+  -moz-transform: scaleX(-1) rotate(-45deg);
+  -ms-transform: scaleX(-1) rotate(-45deg);
+  -webkit-transform: scaleX(-1) rotate(-45deg);
+  transform: scaleX(-1) rotate(-45deg);
+}
+
+.scroll-prompt .scroll-prompt-shape:after {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@-moz-keyframes slidedown {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    -moz-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+}
+@-webkit-keyframes slidedown {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+}
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    -moz-transform: translate(0, 80px);
+    -ms-transform: translate(0, 80px);
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translate(0, 80px);
+    -ms-transform: translate(0, 80px);
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+}
+
+    </style>
+    <div class="scroll-prompt w3-hide-small" id="js_scrollPrompt"><div class="scroll-prompt-shape"></div></div>
+  <div class="w3-display-middle" style="white-space:nowrap; width: 100vw">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+        
+        .mytext {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          list-style: none;
+          border-bottom: 0;
+        }
+        
+        /*.mytext.hidden {
+          border-bottom: 1px solid #fff;
+        }*/
+        
+        .mytext li {
+          display: inline-block;
+          float: left;
+          font-weight: 700;
+          font-size: 2vw;
+          color: #fff;
+          opacity: 1;
+          transition: all 0.5s ease-in-out;
+          max-width: 5em;
+        }
+        .mytext.hidden li.spaced {
+          padding-left: 0.3em;
+        }
+        .mytext li.spaced {
+          padding-left: 0.5em;
+        }
+        
+        .mytext.hidden li.ghost {
+          opacity: 0;
+          max-width: 0;
+        }
+
+        .mytext li.mobile {
+          padding-left: 0.5em;
+        }
+    </style>
+    
+    <!--<ul style="width: 1400px"></ul>-->
+    <!--<ul style="width: 100vw" class="w3-center"></ul>-->
+    <a href="#about">
+    <ul class="w3-hide-small mytext hidden w3-center w3-padding-large w3-black w3-animate-opacity w3-button">
+      <li>C</li>
+      <li class="ghost">o</li>
+      <li class="ghost">d</li>
+      <li class="ghost">o</li>
+      <li class="ghost">n</li>
+      <li class="spaced">U</li>
+      <li class="ghost">s</li>
+      <li class="ghost">a</li>
+      <li class="ghost">g</li>
+      <li class="ghost">e</li>
+      <li class="spaced">B</li>
+      <li class="ghost">i</li>
+      <li class="ghost">a</li>
+      <li class="ghost">s</li>
+      <li class="spaced">A</li>
+      <li class="ghost">c</li>
+      <li class="ghost">r</li>
+      <li class="ghost">o</li>
+      <li class="ghost">s</li>
+      <li class="ghost">s</li>
+      <li class="spaced">P</li>
+      <li class="ghost">o</li>
+      <li class="ghost">p</li>
+      <li class="ghost">u</li>
+      <li class="ghost">l</li>
+      <li class="ghost">a</li>
+      <li class="ghost">t</li>
+      <li class="ghost">i</li>
+      <li class="ghost">o</li>
+      <li class="ghost">n</li>
+      <li class="ghost">s</li>
+    </ul>
+
+            <div>
+                <style>
+                    .mobile_show {
+                      display: none;
+                    }
+              
+                    @media only screen and (max-width: 500px) {
+                      .mobile_show {
+                        display: block;
+                      }
+                    }
+                </style>
+        <ul class="mobile_show mytext hidden w3-center w3-padding-large w3-black w3-animate-opacity w3-button">
+            <li>C</li>
+            <li class="mobile">U</li>
+            <li class="mobile">B</li>
+            <li class="mobile">A</li>
+            <li class="mobile">P</li>
+          </ul>
+      </div>
+</a>
+
+     <!--
+    <center>
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-button">
+            <a href="#about" class="w3-button short">
+                CUBAP
+            </a>
+        </span>
+    </center>
+    <center style="padding-top: 3px;"></center>--->
+    
+  </div>
+</div>
+
+
+<div class="w3-content w3-container w3-padding-64" id="dataPortal">
+    <h3 class="w3-center">DATA PORTAL</h3>
+    <p class="w3-center"><em>Select an interactive visual below to calculate and view codon usage biases across populations.</em></p></br>
+
+
+    <style>
+      img {
+        max-width:100%;
+        max-height:400px;
+      }
+      .column {
+        float: left;
+      }
+      .left {
+        width: 35%;
+      }
+      @media only screen and (max-width: 500px) {
+        .mobile_column {
+          width: 100%;
+        }
+      }
+      .right {
+        width: 65%;
+      }
+      .visualButton {
+        width:80%;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#CodonFrequency").hover(function(){
+          $("#preview").attr("src", "images/CodonFrequencyPreview.png");
+          }, function(){
+          $("#preview").attr("src","images/previewHint.png");
+        });
+        
+        $("#IdenticalCodonPairing").hover(function(){
+          $("#preview").attr("src", "images/IdenticalCodonPairingPreview.png");
+          }, function(){
+          $("#preview").attr("src","images/previewHint.png");
+        });
+
+        $("#CotRNACodonPairing").hover(function(){
+            $("#preview").attr("src", "images/co-tRNACodonPairingPreview.png");
+            }, function(){
+            $("#preview").attr("src","images/previewHint.png");
+          });
+
+        $("#Aversion").hover(function(){
+            $("#preview").attr("src", "images/CodonAversionPreviewNew.png");
+            }, function(){
+            $("#preview").attr("src","images/previewHint.png");
+          });
+
+        $("#RampSequences").hover(function(){
+            $("#preview").attr("src", "images/RampSequencePreview1.png");
+            }, function(){
+            $("#preview").attr("src","images/previewHint.png");
+          });
+
+        $("#GCContent").hover(function(){
+           $("#preview").attr("src", "images/NucleotideCompositionPreview.png");
+           }, function(){
+           $("#preview").attr("src","images/previewHint.png");
+          });
+        });
+    </script>
+
+    <div class="row" id="toggle">
+        <div class="column left mobile_column">
+        <h5>Interactive Visuals:</h5>  
+        <!-- THE OG ONE <button id="CodonFrequency" class="w3-button w3-light-grey visualButton" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiNjRjYWIyODQtOGE4MS00NDk1LWEyMWEtY2Q4NGRkY2EzYzA3IiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">CODON FREQUENCY
+        </button>-->
+        
+        <button id="CodonFrequency" class="w3-button w3-light-grey visualButton" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiODU1OTE5OGMtOTUzZC00MTkzLThlMDUtNDhhZGNiODBkZWZmIiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">CODON FREQUENCY
+        </button>
+
+      </br> </br> 
+      <button id="IdenticalCodonPairing" class="w3-button w3-light-grey visualButton" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiOWFlYWE5M2UtNjc4YS00OWU0LTlhNWMtNDM3ZGEyMDhiM2QzIiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">IDENTICAL CODON PAIRING
+      </button>
+    </br> </br>
+    <button id="CotRNACodonPairing" class="w3-button w3-light-grey visualButton" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiYTRlM2E2ZmUtYTMwNC00NGM2LThjMDktMGMwZTI2YWUyOGNjIiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">Co-tRNA CODON PAIRING
+    </button>
+        </br> </br> 
+        <button id="Aversion" class="w3-button w3-light-grey visualButton" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiYTU4OGEzZWMtNzQwYS00MGNjLWEyZDQtNzAxN2FlNzUwYjc1IiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">CODON AVERSION
+        </button>
+      </br> </br> 
+        <button id="RampSequences" class="w3-button w3-light-grey visualButton" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiZjE1NjlkZmItNWJkZS00YThhLTk1ODYtNzVmY2FjMmVjYmM3IiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">RAMP SEQUENCES 
+        </button>
+      </br> </br> 
+      <button id="GCContent" class="w3-button w3-light-grey visualButton" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiMzllZmU0MzgtOGI1YS00NmQyLTk0YzgtNDc3OGFjNTg0ZjFhIiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">NUCLEOTIDE COMPOSITION
+      </button>
+    </div>
+
+    <div class="column right w3-hide-small">
+      <br><br><br><br>
+      <img id="preview" src="images/previewHint.png">
+    </div>
+  </div>
+  
+  <div class="w3-row">
+      <br><br><br>
+  <a href="https://cubap.readthedocs.io/en/latest/">
+    <button class="w3-button w3-black w3-right w3-section" type="button">
+      READ THE DOCS</button></a>
+    </div>
+
+    <br>
+    <p class="w3-center">
+      *Run your own codon usage bias analyses using the files and Python scripts provided at the <a href="https://cubap.byu.edu/Results.html#data">Results</a> page and our <a href="https://github.com/kauwelab/cubap">GitHub</a>.
+    </p>
+</div>
+<!--
+<div id="vizDiv"><br><br>
+  <h3 class="w3-center">
+    <t>Data Portal</t>
+      <div  id="toggle">
+        <br>
+          <button class="w3-button w3-light-grey" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiOTE1ZjMxOWUtYmZmNi00YzdiLWJiZWEtNzliOGJiZDFlZDE4IiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">GENE-SPECIFIC QUERY
+          </button>
+          <h5>This report allows you to look at codon biases in specific genes and isoforms and then compare these across populations.</h5>
+        </br> </br> 
+        <button class="w3-button w3-light-grey" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiOTEyNTdiMmMtYWQ0OC00ZDJmLTkxZjktOGJmMTRkZTgzYmUzIiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">RAMP SEQUENCES 
+        </button> 
+        <h5>This report shows ramp sequences.</h5>  
+      </br> </br>   
+        <button class="w3-button w3-light-grey" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiNzg4OWY1NTQtMjQ1Yi00NTA5LTk4ZTYtYTBjZTk5ZjkzNWY0IiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">OVERALL CODON BIASES 
+          </button>
+          <h5>This report shows total codon bias frequencies per individual for each population.</h5>
+      </div>
+  </h3><br>
+  --->
+  <br><br><br>
+
+<!-- Container (About Section) -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">ABOUT</span>
+    </div>
+  </div>
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT</h3>
+  <p class="w3-center"><em>An interactive web for the study of codon usage bias across human populations</em></p></br>
+  <p>Codon usage bias is the unequal distribution of synonymous codons in a gene. In the central dogma of biology, genes are transcribed from DNA to RNA and then translated into polypeptide chains. During translation, ribosomes read any of 61 unique nucleotide triplets called codons and translate it to one of 20 amino acids. In this process, when an aminoacyl-tRNA binds to its complementary codon, Watson-Crick pairing rules are not always followed on the third nucleotide, causing codon “wobble.” Codon wobble allows the tRNA to bind to one of several different codons. Because of this degeneracy, multiple codons can synonymously encode the same amino acid. When these synonymous codons are present in different frequencies, it is referred to as codon usage bias. </p>
+  <div class="w3-row">
+    <div class="w3-col w3-hide-small m6 w3-center w3-padding-large">
+      <p><b><i class="w3-margin-right"></i></br>DNA Codon to Amino Acid Table</b></p>
+      <img src="codonChart.png" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <div class="w3-col w3-hide-small m6 w3-padding-large">
+      <p>There are several different types of codon usage bias:</br>
+        <ul>
+          <li><b>Codon frequency: </b>the number of times that a certain codon is present in a gene. More common codons correlate with more abundant tRNAs.</li>
+          <li><b>Codon aversion: </b>when a codon is not used at all in a gene. These very rare codons correlate to very rare tRNAs.</li>
+          <li><b>Identical codon pairing: </b>when a codon occurs multiple times in the same ribosome footprint. This allows for tRNA to be used reused quickly.</li>
+          <li><b>Co-tRNA codon paioring: </b>when two or more synonymous (but not identical) codons occur in the same ribosome footprint. This also allows for tRNA to be used reused quickly.</li>
+          <li><b>Ramp sequence: </b>a region of rare codons at the beginning of a gene that cause for slower and more efficient transcription initiation.</li>
+        </ul></br></br>
+      </div>
+      <div class="w3-hide-small">
+       Codon usage biases play a very important role in the central dogma of biology because they affect</br>
+      <ul>
+        <li>The speed and efficiency of tranlsation elongation</li>
+        <li>The level of gene expresrsion</li>
+        <li>mRNA secondary structure</li>
+        <li>Protein secondary structure</li>
+        <li>Genetic diseases and disorders</li>
+      </ul></br>
+      </div>
+      <div>
+      Population-specific codon usage biases have been little studied, despite increasing analytical resources. We present this web server, Codon Usage Bias Across Populations (CUBAP), to facilitate analyses of codon usage biases across different human population groups. Using data from the 1000 Genomes Project, we calculate codon frequencies, codon aversion, identical codon pairing, and co-tRNA codon pairing for 17,635 genes from 2,504 individuals spanning 26 populations.</p>
+        <a href="https://academic.oup.com/nar/article/48/19/11030/5921303">
+        <button class="w3-button w3-black w3-right w3-section" type="button">
+          LEARN MORE</button></a>
+        </div>
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text 
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">DATA PORTAL</span>
+  </div>
+</div>
+  <div id="vizDiv"><br><br>
+    <h3 class="w3-center">
+      <t>Select a report to load:</t>
+        <div  id="toggle">
+          <br>
+            <button class="w3-button w3-light-grey" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiOTE1ZjMxOWUtYmZmNi00YzdiLWJiZWEtNzliOGJiZDFlZDE4IiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">GENE-SPECIFIC QUERY
+            </button>
+            <h5>This report allows you to look at codon biases in specific genes and isoforms and then compare these across populations.</h5>
+          </br> </br> 
+          <button class="w3-button w3-light-grey" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiOTEyNTdiMmMtYWQ0OC00ZDJmLTkxZjktOGJmMTRkZTgzYmUzIiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">RAMP SEQUENCES 
+          </button> 
+          <h5>This report shows ramp sequences.</h5>  
+        </br> </br>   
+          <button class="w3-button w3-light-grey" onclick="window.open('https://app.powerbi.com/view?r=eyJrIjoiNzg4OWY1NTQtMjQ1Yi00NTA5LTk4ZTYtYTBjZTk5ZjkzNWY0IiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9','_blank')">OVERALL CODON BIASES 
+            </button>
+            <h5>This report shows total codon bias frequencies per individual for each population.</h5>
+        </div>
+    </h3><br>
+
+
+    this should be commented out
+    <div id="right" class='tableau'>
+        <iframe width="100%" height="50%" src="https://app.powerbi.com/view?r=eyJrIjoiNzg4OWY1NTQtMjQ1Yi00NTA5LTk4ZTYtYTBjZTk5ZjkzNWY0IiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+    <div id="left" class='tableau'>
+      <iframe width="1400" height="900" src="https://app.powerbi.com/view?r=eyJrIjoiOTE1ZjMxOWUtYmZmNi00YzdiLWJiZWEtNzliOGJiZDFlZDE4IiwidCI6ImM2ZmM2ZTliLTUxZmItNDhhOC1iNzc5LTllZTU2NGI0MDQxMyIsImMiOjZ9" frameborder="0" allowFullScreen="true"></iframe>
+      </div>
+
+
+
+</div>-->
+
+
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+
+<!-- Third Parallax Image with Portfolio Text -->
+<!--
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="help">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">HELP</span>
+  </div>
+</div>
+-->
+
+
+<!-- Container (Contact Section) -->
+<!--
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">HELP</h3>
+  <p class="w3-center"><em>How to use CUBAP</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <h4>Welcome to CUBAP</h4>
+      <p>Thanks for using CUBAP! CUBAP stands for Codon Usage Bias Across Populations and is a tool for analyzing the codon usage bias in the human genome.</p>
+      <br>
+      <h4>How to navigate between reports and pages</h4>
+      <p>To open a report, click on its button in the 'Data Portal' section of this webpage. This will open your desired report in a separate web page.
+        You may open multiple reports at once. Each report has one or more pages, which you can navigate using embedded buttons. Each page has a back arrow button in the top left hand corner of the page. This will return you to your previous page. 
+        There are also buttons in the top right hand corner of the page. These may either take you back to the home page or advance you to the next page. 
+        Power Bi also has built in buttons to move between pages at the bottom of the page.</p>
+    <br>
+      <h4>How to select a gene or group of genes</h4>
+      <p>You can select any of the 17,635 genes to analyze its codon usage bias using the dropdown boxes labelled 'Gene' and 'Name.' 
+          The selected gene is synchronized across all pages. You can change genes or isoforms from any page.
+          Click on the down arrow on the 'Gene' box to view all the available genes. You can search for gene by typing its name into the search bar. 
+          The search feature is case sensative and all gene names are in CAPS. To select multiple genes hold the 'CTRL' or 'command' key.
+          Click the 'Reset' arrow button to clear your current gene selection. You can choose an isoform of your gene by selecting an NP value in the 'Name' dropdown box.
+          You cannot search by NP value, only gene name.</p>
+      <br>
+    <h4>Comparing genes vs. taking their average</h4>
+      <p>In the 'Gene-Specific Query' report, you can choose to either compare or average the codon usage biases of your selected genes. 
+        To compare genes, click the 'Compare Genes' button at the top of the page. To average genes, click the 'Average of Genes' button at the top of the page. 
+        Currently, the compare across populations page only allows the average of the genes to be calculated.</p>
+        <br>
+      <h4>How to interpret the graphs</h4>
+        <p>don't be dumb.</p>
+      <br>
+        <button class="w3-button w3-black w3-right w3-section" type="button" onclick="window.open('#contact')">
+          ASK FOR HELP</button>
+    </div>
+  </div>
+</div>
+-->
+
+
+<!-- Fourth Parallax Image with Portfolio Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min" id="contact">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">THE LAB</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">THE KAUWE LAB</h3>
+  <p class="w3-center"><em>Brigham Young University</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="LSB.jpeg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Life Sciences Building, Provo, Utah<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 801-422-1458<br>
+        <i class="fa fa-twitter fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+        <a href="https://twitter.com/kauwelabbyu?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @kauwelabbyu</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <a href="https://kauwelab.byu.edu/Home.aspx">
+        <button class="w3-button w3-black w3-right w3-section" type="button">
+          LEARN MORE</button></a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity-min">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <a href="Results.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-right w3-margin-right"></i>To the results</a>
+  <!--this is the button im adding to download yay-->
+  <!--<button type="button" id="downloader" onclick="downloadResults();" class="w3-button w3-light-grey">Download Files</button>-->
+  <!--<div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>-->
+</footer>
+<style>
+    #right { display: none; } 
+    
+    
+    
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+$(function scroller() {
+          var text = $(".mytext");
+          $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+        
+            if (scroll >= 25) {
+              text.removeClass("hidden");
+            } else {
+              text.addClass("hidden");
+            }
+          });
+        });
+
+$('#toggle > button').click(function() {
+    var ix = $(this).index();
+    
+    $('#left').toggle( ix === 0 );
+    $('#right').toggle( ix === 1 );
+});
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+</script>
+</body>
+</html>
