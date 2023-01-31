@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html>
+<title>CUBAP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.whiteText {
+    color: white;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  /*background-image: url('genome.jpg');*/
+  background-image: url('images/crowd.jpeg');
+  height: 100%;
+}
+
+/* Embedded tableau */
+.tableau {
+    max-width: 1500px;
+    margin: auto;
+}
+
+/* Second image (Results) */
+.bgimg-2 {
+  background-image: url("test-tubes.jpg");
+  min-height: 400px;
+  width: 100%;
+}
+
+/* Third image (Data) */
+.bgimg-3 {
+  background-image: url("code.jpg");
+  min-height: 400px;
+  width: 100%;
+}
+
+/* Fourth image (The Lab) */
+.bgimg-4 {
+  background-image: url("dna-pic.jpg");
+  min-height: 400px;
+  width: 100%;
+}
+
+.graph {
+    max-width:100%;
+    height:auto;
+}
+
+.graph_half {
+    max-width:50%;
+    height:auto;
+}
+
+h4{
+  margin-bottom: 0px;
+}
+p{
+  margin-top: 0px;
+}
+h4.thick {
+  font-weight: bold;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: rgb(224,224,224);
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 1px;
+  padding-left: 6px;
+}
+
+.Africa {
+    background-color: rgb(255,255,204);
+}
+
+.AfricaCol {
+     background-color: rgb(255,255,153);
+}
+
+.America {
+    background-color: rgb(255,204,204);
+}
+
+.AmericaCol {
+    background-color: rgb(255,153,153);
+}
+
+.EastAsia {
+    background-color: rgb(229,255,204);
+}
+
+.EastAsiaCol {
+    background-color: rgb(205,255,153);
+}
+
+.Europe {
+    background-color: rgb(229,204,255);
+}
+
+.EuropeCol {
+    background-color: rgb(204,153,255);
+}
+
+.SouthAsia {
+    background-color: rgb(204,229,255);
+}
+
+.SouthAsiaCol {
+    background-color: rgb(153,204,255);
+}
+
+
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+A:hover {color: DarkGrey;}
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top whiteText">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="/" class="w3-bar-item w3-button"><i class="fa fa-arrow-left w3-margin-right"></i>BACK TO HOME</a>
+    <a href="#results" class="w3-bar-item w3-button w3-hide-small">RESULTS</a>
+    <a href="#data" class="w3-bar-item w3-button w3-hide-small">DATA</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#results" class="w3-bar-item w3-button" onclick="toggleFunction()">RESULTS</a>
+    <a href="#data" class="w3-bar-item w3-button" onclick="toggleFunction()">DATA</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class= "bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <style>
+        .scroll-prompt {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  z-index: 100;
+  -moz-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+
+.scroll-prompt .scroll-prompt-shape {
+  position: relative;
+  -moz-animation: slidedown 2.25s infinite;
+  -webkit-animation: slidedown 2.25s infinite;
+  animation: slidedown 2.25s infinite;
+}
+
+.scroll-prompt .scroll-prompt-shape:before,
+.scroll-prompt .scroll-prompt-shape:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3em;
+  height: .5em;
+  top: 0;
+  left: 0;
+  background: #fff;
+  -moz-border-radius: 0 0.25em 0.25em 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 0.25em 0.25em 0;
+  -moz-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  -webkit-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+
+.scroll-prompt .scroll-prompt-shape:before {
+  -moz-transform: scaleX(-1) rotate(-45deg);
+  -ms-transform: scaleX(-1) rotate(-45deg);
+  -webkit-transform: scaleX(-1) rotate(-45deg);
+  transform: scaleX(-1) rotate(-45deg);
+}
+
+.scroll-prompt .scroll-prompt-shape:after {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@-moz-keyframes slidedown {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    -moz-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+}
+@-webkit-keyframes slidedown {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+}
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    -moz-transform: translate(0, 80px);
+    -ms-transform: translate(0, 80px);
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translate(0, 80px);
+    -ms-transform: translate(0, 80px);
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+}
+
+    </style>
+    <div class="scroll-prompt w3-hide-small" id="js_scrollPrompt"><div class="scroll-prompt-shape"></div></div>
+  <div class="w3-display-middle" style="white-space:nowrap; width: 100vw">
+      
+      
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+        
+        
+        
+        .mytext {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          list-style: none;
+          border-bottom: 0;
+        }
+        
+        /*.mytext.hidden {
+          border-bottom: 1px solid #fff;
+        }*/
+        
+        .mytext li {
+          display: inline-block;
+          float: left;
+          font-weight: 700;
+          font-size: 2vw;
+          color: #fff;
+          opacity: 1;
+          transition: all 0.5s ease-in-out;
+          max-width: 5em;
+        }
+        .mytext.hidden li.spaced {
+          padding-left: 0.3em;
+        }
+        .mytext li.spaced {
+          padding-left: 0.5em;
+        }
+        
+        .mytext.hidden li.ghost {
+          opacity: 0;
+          max-width: 0;
+        }
+        .mytext li.mobile {
+          padding-left: 0.5em;
+        }
+    </style>
+    
+    <a href="#about">
+    <ul class="mytext w3-hide-small hidden w3-center w3-padding-large w3-black w3-animate-opacity w3-button">
+      <li>C</li>
+      <li class="ghost">o</li>
+      <li class="ghost">d</li>
+      <li class="ghost">o</li>
+      <li class="ghost">n</li>
+      <li class="spaced">U</li>
+      <li class="ghost">s</li>
+      <li class="ghost">a</li>
+      <li class="ghost">g</li>
+      <li class="ghost">e</li>
+      <li class="spaced">B</li>
+      <li class="ghost">i</li>
+      <li class="ghost">a</li>
+      <li class="ghost">s</li>
+      <li class="spaced">A</li>
+      <li class="ghost">c</li>
+      <li class="ghost">r</li>
+      <li class="ghost">o</li>
+      <li class="ghost">s</li>
+      <li class="ghost">s</li>
+      <li class="spaced">P</li>
+      <li class="ghost">o</li>
+      <li class="ghost">p</li>
+      <li class="ghost">u</li>
+      <li class="ghost">l</li>
+      <li class="ghost">a</li>
+      <li class="ghost">t</li>
+      <li class="ghost">i</li>
+      <li class="ghost">o</li>
+      <li class="ghost">n</li>
+      <li class="ghost">s</li>
+    </ul>
+    
+    <div>
+        <style>
+            .mobile_show {
+              display: none;
+            }
+      
+            @media only screen and (max-width: 500px) {
+              .mobile_show {
+                display: block;
+              }
+            }
+        </style>
+<ul class="mobile_show mytext hidden w3-center w3-padding-large w3-black w3-animate-opacity w3-button">
+    <li>C</li>
+    <li class="mobile">U</li>
+    <li class="mobile">B</li>
+    <li class="mobile">A</li>
+    <li class="mobile">P</li>
+  </ul>
+</div>
+</a>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="results">
+  <h3 class="w3-center">POPULATION STRATIFICATION</h3>
+  <p class="w3-center"><em>Specific codon biases and genes that were the most statistically different between populations.</em></p><br>
+
+
+
+  <h3>Codon Frequency</h3>
+  <hr>
+  <a href="DataFiles/sub_codon_counts.csv">
+    <button class="w3-button w3-black w3-right w3-section" type="button">
+      DOWNLOAD</button></a>
+      <br>
+  <p>Subpopulation:</p>
+  <table align="center">
+    <tr>
+      <th> Gene</th>
+      <th> Isoform</th>
+      <th> Codon</th>
+      <th> % Significant Population Comparisons</th>
+      <th> Min P-Value</th>
+      <th> Max Effect Size</th>
+    </tr>
+    <tr>
+      <td rowspan="3">SLC24A5</td>
+      <td rowspan="3">NP_995322.1</td>
+      <td>GCA</td>
+      <td>61.2%</td>
+      <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+      <td>14.3881</td>
+    </tr>
+    <tr>
+      <td>ACA</td>
+      <td>60.9%</td>
+      <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+      <td>14.3881</td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="3">ACKR1</td>
+      <td rowspan="3">NP_001116423.1</td>
+      <td>GGT</td>
+      <td>55.1%</td>
+      <td>9.3113x10<sup>-222</sup></td>
+      <td>6.5841</td>
+    </tr>
+    <tr>
+      <td>GAT</td>
+      <td>55.1%</td>
+      <td>9.3113x10<sup>-222</sup></td>
+      <td>6.5841</td>
+    </tr>
+    <tr>
+      <td>GCA</td>
+      <td>8.31%</td>
+      <td>2.0305x10<sup>-15</sup></td>
+      <td>0.8031</td>
+    </tr>
+    <tr>
+      <td rowspan="3">ZNF646</td>
+      <td rowspan="3">NP_055514.3</td>
+      <td>GGG</td>
+      <td>55.4%</td>
+      <td>3.7014x10<sup>-209</sup></td>
+      <td>6.2204</td>
+    </tr>
+    <tr>
+      <td>GAG</td>
+      <td>53.8%</td>
+      <td>6.3742x10<sup>-207</sup></td>
+      <td>5.8005</td>
+    </tr>
+    <tr>
+      <td>GAA</td>
+      <td>52.3%</td>
+      <td>7.0106x10<sup>-158</sup></td>
+      <td>4.4430</td>
+    </tr>
+    </table>
+    <br>
+    <a href="DataFiles/super_codon_counts.csv">
+      <button class="w3-button w3-black w3-right w3-section" type="button">
+        DOWNLOAD</button></a>
+    <br>
+    <p>Superpopulation:</p>
+    <table align="center">
+      <tr>
+        <th> Gene</th>
+        <th> Isoform</th>
+        <th> Codon</th>
+        <th> % Significant Population Comparisons</th>
+        <th> Min P-Value</th>
+        <th> Max Effect Size</th>
+      </tr>
+      <tr>
+        <td rowspan="3">SLC24A5</td>
+        <td rowspan="3">NP_995322.1</td>
+        <td>GCA</td>
+        <td>80%</td>
+        <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+        <td>4.5975</td>
+      </tr>
+      <tr>
+        <td>ACA</td>
+        <td>80%</td>
+        <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+        <td>4.5975</td>
+      </tr>
+      <tr>
+        <td>N/A</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="3">ACKR1</td>
+        <td rowspan="3">NP_001116423.1</td>
+        <td>GGT</td>
+        <td>90%</td>
+        <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+        <td>4.4389</td>
+      </tr>
+      <tr>
+        <td>GAT</td>
+        <td>90%</td>
+        <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+        <td>4.4132</td>
+      </tr>
+      <tr>
+        <td>GCA</td>
+        <td>70%</td>
+        <td>6.026x10<sup>-58</sup></td>
+        <td>0.6904</td>
+      </tr>
+      <tr>
+        <td rowspan="3">ZNF646</td>
+        <td rowspan="3">NP_055514.3</td>
+        <td>GGG</td>
+        <td>80%</td>
+        <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+        <td>3.5180</td>
+      </tr>
+      <tr>
+        <td>GAG</td>
+        <td>80%</td>
+        <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+        <td>3.4961</td>
+      </tr>
+      <tr>
+        <td>GAA</td>
+        <td>80%</td>
+        <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+        <td>3.0178</td>
+      </tr>
+      </table>
+      <br><br>
+      <h3>Co-tRNA Codon Pairing</h3>
+      <hr>
+    <a href="DataFiles/sub_cotrna.csv">
+      <button class="w3-button w3-black w3-right w3-section" type="button">
+        DOWNLOAD</button></a>
+        <br>
+        <p>Subpopulation:</p>
+      <table align="center">
+        <tr>
+          <th> Gene</th>
+          <th> Isoform</th>
+          <th> Amino Acid</th>
+          <th> % Significant Population Comparisons</th>
+          <th> Min P-Value</th>
+          <th> Max Effect Size</th>
+        </tr>
+        <tr>
+          <td rowspan="3">SLC24A5</td>
+          <td rowspan="3">NP_995322.1</td>
+          <td>Thr</td>
+          <td>61.8%</td>
+          <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+          <td>14.3881</td>
+        </tr>
+        <tr>
+          <td>N/A</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>N/A</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td rowspan="3">ACKR1</td>
+          <td rowspan="3">NP_001116423.1</td>
+          <td>Gly</td>
+          <td>56.3%</td>
+          <td>9.3113x10<sup>-222</sup></td>
+          <td>6.5841</td>
+        </tr>
+        <tr>
+          <td>Asp</td>
+          <td>56.3%</td>
+          <td>9.3113x10<sup>-222</sup></td>
+          <td>6.5841</td>
+        </tr>
+        <tr>
+          <td>Ala</td>
+          <td>9.54%</td>
+          <td>2.0305x10<sup>-15</sup></td>
+          <td>0.8031</td>
+        </tr>
+        <tr>
+          <td rowspan="3">SLC30A9</td>
+          <td rowspan="3">NP_006336.3</td>
+          <td>Val</td>
+          <td>46.2%</td>
+          <td>1.1197x10<sup>-177</sup></td>
+          <td>5.0771</td>
+        </tr>
+        <tr>
+          <td>N/A</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>N/A</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        </table>
+        <br>
+    <a href="DataFiles/super_cotrna.csv">
+      <button class="w3-button w3-black w3-right w3-section" type="button">
+        DOWNLOAD</button></a>
+        <br>
+        <p>Superpopulation:</p>
+        <table align="center">
+          <tr>
+            <th> Gene</th>
+            <th> Isoform</th>
+            <th> Amino Acid</th>
+            <th> % Significant Population Comparisons</th>
+            <th> Min P-Value</th>
+            <th> Max Effect Size</th>
+          </tr>
+          <tr>
+            <td rowspan="3">SLC24A5</td>
+            <td rowspan="3">NP_995322.1</td>
+            <td>Thr</td>
+            <td>80%</td>
+            <td><span>&#60;</span> 5x10<sup>-324</sup</td>
+            <td>4.5447</td>
+          </tr>
+          <tr>
+            <td>N/A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>N/A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="3">ACKR1</td>
+            <td rowspan="3">NP_001116423.1</td>
+            <td>Gly</td>
+            <td>90%</td>
+            <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+            <td>4.4388</td>
+          </tr>
+          <tr>
+            <td>Asp</td>
+            <td>90%</td>
+            <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+            <td>4.4132</td>
+          </tr>
+          <tr>
+            <td>Ala</td>
+            <td>70%</td>
+            <td>2.1159x01<sup>-56</sup></td>
+            <td>0.6803</td>
+          </tr>
+          <tr>
+            <td rowspan="3">AHSA1</td>
+            <td rowspan="3">NP_036243.1</td>
+            <td>Leu</td>
+            <td>70%</td>
+            <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+            <td>3.3035</td>
+          </tr>
+          <tr>
+            <td>Val</td>
+            <td>40%</td>
+            <td>5.3397x10<sup>-41</sup></td>
+            <td>0.5717</td>
+          </tr>
+          <tr>
+            <td>N/A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          </table>
+          
+        <br><br>
+        <h3>Identical Codon Pairing</h3>
+        <hr>
+    <a href="DataFiles/sub_ident.csv">
+      <button class="w3-button w3-black w3-right w3-section" type="button">
+        DOWNLOAD</button></a>
+        <br>
+        <p>Subpopulation:</p>
+        <table align="center">
+          <tr>
+            <th> Gene</th>
+            <th> Isoform</th>
+            <th> Codon</th>
+            <th> % Significant Population Comparisons</th>
+            <th> Min P-Value</th>
+            <th> Max Effect Size</th>
+          </tr>
+          <tr>
+            <td rowspan="3">SLC24A5</td>
+            <td rowspan="3">NP_995322.1</td>
+            <td>GCA</td>
+            <td>61.2%</td>
+            <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+            <td>14.3881</td>
+          </tr>
+          <tr>
+            <td>N/A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>N/A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="3">ACKR1</td>
+            <td rowspan="3">NP_001116423.1</td>
+            <td>GAT</td>
+            <td>55.1%</td>
+            <td>9.3113x10<sup>-222</sup></td>
+            <td>6.5841</td>
+          </tr>
+          <tr>
+            <td>N/A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>N/A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="3">ZNF646</td>
+            <td rowspan="3">NP_055514.3</td>
+            <td>GGG</td>
+            <td>55.7%</td>
+            <td>3.7014x10<sup>-209</sup></td>
+            <td>6.2204</td>
+          </tr>
+          <tr>
+            <td>GAG</td>
+            <td>53.2%</td>
+            <td>2.6925x10<sup>-205</sup></td>
+            <td>5.7429</td>
+          </tr>
+          <tr>
+            <td>ACT</td>
+            <td>42.2%</td>
+            <td>2.5272x10<sup>-89</sup></td>
+            <td>2.5849</td>
+          </tr>
+        </table>
+        <br>
+    <a href="DataFiles/super_ident.csv">
+      <button class="w3-button w3-black w3-right w3-section" type="button">
+        DOWNLOAD</button></a>
+        <br>
+        <p>Superpopulation:</p>
+        <table align="center">
+          <tr>
+            <th> Gene</th>
+            <th> Isoform</th>
+            <th> Codon</th>
+            <th> % Significant Population Comparisons</th>
+            <th> Min P-Value</th>
+            <th> Max Effect Size</th>
+          </tr>
+          <tr>
+            <td rowspan="3">SLC24A5</td>
+            <td rowspan="3">NP_995322.1</td>
+            <td>GCA</td>
+            <td>80%</td>
+            <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+            <td>4.5975</td>
+          </tr>
+          <tr>
+            <td>N/A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>N/A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="3">ACKR1</td>
+            <td rowspan="3">NP_001116423.1</td>
+            <td>GAT</td>
+            <td>90%</td>
+            <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+            <td>4.4388</td>
+          </tr>
+          <tr>
+            <td>TTC</td>
+            <td>30%</td>
+            <td>1.3887x10<sup>-28</sup></td>
+            <td>0.4700</td>
+          </tr>
+          <tr>
+            <td>N/A</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="3">ZNF646</td>
+            <td rowspan="3">NP_055514.3</td>
+            <td>GGG</td>
+            <td>80%</td>
+            <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+            <td>3.5380</td>
+          </tr>
+          <tr>
+            <td>GAG</td>
+            <td>80%</td>
+            <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+            <td>3.3803</td>
+          </tr>
+          <tr>
+            <td>GCA</td>
+            <td>90%</td>
+            <td>2.8240x10<sup>-236</sup></td>
+            <td>1.6980</td>
+          </tr>
+        </table>
+
+        <br><br>
+        <h3>Ramp Sequences</h3>
+        <hr>
+    <a href="DataFiles/sub_ramp.csv">
+      <button class="w3-button w3-black w3-right w3-section" type="button">
+        DOWNLOAD</button></a>
+        <br>
+        <p>Subpopulation:</p>
+        <table align="center">
+          <tr>
+            <th> Gene</th>
+            <th> Isoform</th>
+            <th> % Significant Population Comparisons</th>
+            <th> Min P-Value</th>
+            <th> Max Effect Size</th>
+          </tr>
+          <tr>
+            <td rowspan="1">ACSM2A</td>
+            <td rowspan="1">NP_001295098.1</td>
+            <td>8.31%</td>
+            <td>3.7312x10<sup>-268</sup></td>
+            <td>5.6807x10<sup>14</sup></td>
+          </tr>
+          <tr>
+            <td rowspan="1">PACRG</td>
+            <td rowspan="1">NP_689623.2</td>
+            <td>1.85%</td>
+            <td>3.6664x10<sup>-130</sup></td>
+            <td>4.2093x10<sup>14</sup></td>
+          </tr>
+          <tr>
+            <td rowspan="1">EHMT2</td>
+            <td rowspan="1">NP_079532.5</td>
+            <td>22.8%</td>
+            <td><span>&#60;</span> 5x10<sup>-324</sup></td>
+            <td>1.0830x10<sup>14</sup></td>
+          </tr>
+        </table>
+        
+        <br>
+    <a href="DataFiles/super_ramp.csv">
+      <button class="w3-button w3-black w3-right w3-section" type="button">
+        DOWNLOAD</button></a>
+        <br>
+        <p>Superpopulation:</p>
+        <table align="center">
+          <tr>
+            <th> Gene</th>
+            <th> Isoform</th>
+            <th> % Significant Population Comparisons</th>
+            <th> Min P-Value</th>
+            <th> Max Effect Size</th>
+          </tr>
+          <tr>
+            <td rowspan="1">NUDT7</td>
+            <td rowspan="1">NP_001230590.1</td>
+            <td>10%</td>
+            <td>6.9725x10<sup>-193</sup></td>
+            <td>8.5616x10<sup>7</sup></td>
+          </tr>
+          <tr>
+          <tr>
+            <td rowspan="1">ACSM2A</td>
+            <td rowspan="1">NP_001295098.1</td>
+            <td>40%</td>
+            <td>1.0230x10<sup>-33</sup></td>
+            <td>91810.9778</td>
+          </tr>
+          <tr>
+            <td rowspan="1">CBLC</td>
+            <td rowspan="1">NP_036248.3</td>
+            <td>10%</td>
+            <td>9.2220x10<sup>-51</sup></td>
+            <td>3631.9351</td>
+          </tr>
+        </table>
+        <div class="w3-row">
+      <br>
+
+</div>
+    </div>
+
+  <!-- Fourth Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="contact">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">DATA</span>
+  </div>
+</div>
+<div class="w3-content w3-container w3-padding-64" id="data">
+  <h3 class="w3-center">Data Files</h3>
+  <p class="w3-center"><em>Click on a file to download it.</em></p></br>
+
+  <h5>Satistically Significant Population Differences Data Files:</h5>
+  <div style="margin-left: 1em;">
+  <a href="DataFiles/sub_codon_counts.csv" download="codon_frequency_sub.csv">codon_frequency_sub.csv</a><br>
+  <a href="DataFiles/super_codon_counts.csv" download="codon_frequency_super.csv">codon_frequency_super.csv</a><br>
+  <a href="DataFiles/sub_sotrna.csv" download="co_trna_sub.csv">co_trna_sub.csv</a><br>
+  <a href="DataFiles/super_cotrna.csv" download="co_trna_super.csv">co_trna_super.csv</a><br>
+  <a href="DataFiles/sub_ident.csv" download="identical_sub.csv">identical_sub.csv</a><br>
+  <a href="DataFiles/super_ident.csv" download="identical_super.csv">identical_super.csv</a><br>
+  <a href="DataFiles/sub_ramp.csv" download="ramp_sub.csv">ramp_sub.csv</a><br>
+  <a href="DataFiles/super_ramp.csv" download="ramp_super.csv">ramp_super.csv</a><br>
+  </div>
+
+  <br>
+  <h5>Scripts:</h5>
+  <div style="margin-left: 1em;">
+    <a href="https://github.com/kauwelab/cubap">Our Github</a>
+  </div>
+  </div>
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity-min">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+<style>
+    #right { display: none; }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+$(function scroller() {
+          var text = $(".mytext");
+          $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+        
+            if (scroll >= 25) {
+              text.removeClass("hidden");
+            } else {
+              text.addClass("hidden");
+            }
+          });
+        });
+
+
+// change button text
+function change() {
+    if (document.getElementById("switchButton").innerHTML == "CODON USAGE BIAS") {
+        document.getElementById("switchButton").innerHTML = "CODON PAIRING BIAS";
+    }
+    else
+    {
+        document.getElementById("switchButton").innerHTML = "CODON USAGE BIAS";
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+<title>CUBAP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.whiteText {
+    color: white;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  /*background-image: url('genome.jpg');*/
+  background-image: url('dna-sequence.jpg');
+  height: 100%;
+}
+
+/* Embedded tableau */
+.tableau {
+    max-width: 1500px;
+    margin: auto;
+}
+
+/* Second image (Results) */
+.bgimg-2 {
+  background-image: url("test-tubes.jpg");
+  min-height: 400px;
+  width: 100%;
+}
+
+/* Third image (Data) */
+.bgimg-3 {
+  background-image: url("code.jpg");
+  min-height: 400px;
+  width: 100%;
+}
+
+/* Fourth image (The Lab) */
+.bgimg-4 {
+  background-image: url("dna-pic.jpg");
+  min-height: 400px;
+  width: 100%;
+}
+
+.graph {
+    max-width:100%;
+    height:auto;
+}
+
+.graph_half {
+    max-width:50%;
+    height:auto;
+}
+
+h4{
+  margin-bottom: 0px;
+}
+p{
+  margin-top: 0px;
+}
+h4.thick {
+  font-weight: bold;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 72%;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: rgb(224,224,224);
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 1px;
+  padding-left: 6px;
+}
+
+.Africa {
+    background-color: rgb(255,255,204);
+}
+
+.AfricaCol {
+     background-color: rgb(255,255,153);
+}
+
+.America {
+    background-color: rgb(255,204,204);
+}
+
+.AmericaCol {
+    background-color: rgb(255,153,153);
+}
+
+.EastAsia {
+    background-color: rgb(229,255,204);
+}
+
+.EastAsiaCol {
+    background-color: rgb(205,255,153);
+}
+
+.Europe {
+    background-color: rgb(229,204,255);
+}
+
+.EuropeCol {
+    background-color: rgb(204,153,255);
+}
+
+.SouthAsia {
+    background-color: rgb(204,229,255);
+}
+
+.SouthAsiaCol {
+    background-color: rgb(153,204,255);
+}
+
+
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+A:hover {color: DarkGrey;}
+/*
+.vizbut {
+    padding: 120px;
+    margin: 40px;
+}
+
+* { box-sizing: border-box; }
+
+.grid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
+}
+
+.grid > * {
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__img2 {
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
+}
+*/
+/*
+.zoom {
+  transition: all .2s ease-in-out;
+}
+.zoom:hover {
+  -ms-transform: scale(4);
+  -webkit-transform: scale(4);
+  transform: scale(4); 
+  position: relative; 
+  top: -50px;
+}
+.zoom:hover .hovertext {
+    opacity: 1;
+}
+
+.three:hover {
+    -ms-transform: scale(1.8);
+  -webkit-transform: scale(1.8);
+  transform: scale(1.8); 
+}
+
+.three {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+
+.hovertext {
+  background: rgba(46, 49, 49, 0.6);
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.mytext {
+  color: white;
+  font-size: 5px;
+  padding: 1px 1px;
+}
+
+
+.one {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+
+.two {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.three {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.four {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.five {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+*/
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="/" class="w3-bar-item w3-button"><i class="fa fa-arrow-left w3-margin-right"></i>BACK TO HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small">ABSTRACT</a>
+    <a href="#results" class="w3-bar-item w3-button w3-hide-small">RESULTS</a>
+    <a href="#data" class="w3-bar-item w3-button w3-hide-small">DATA</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABSTRACT</a>
+    <a href="#results" class="w3-bar-item w3-button" onclick="toggleFunction()">RESULTS</a>
+    <a href="#data" class="w3-bar-item w3-button" onclick="toggleFunction()">DATA</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class= "bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <style>
+        .scroll-prompt {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  z-index: 100;
+  -moz-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+
+.scroll-prompt .scroll-prompt-shape {
+  position: relative;
+  -moz-animation: slidedown 2.25s infinite;
+  -webkit-animation: slidedown 2.25s infinite;
+  animation: slidedown 2.25s infinite;
+}
+
+.scroll-prompt .scroll-prompt-shape:before,
+.scroll-prompt .scroll-prompt-shape:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3em;
+  height: .5em;
+  top: 0;
+  left: 0;
+  background: #fff;
+  -moz-border-radius: 0 0.25em 0.25em 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 0.25em 0.25em 0;
+  -moz-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  -webkit-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+
+.scroll-prompt .scroll-prompt-shape:before {
+  -moz-transform: scaleX(-1) rotate(-45deg);
+  -ms-transform: scaleX(-1) rotate(-45deg);
+  -webkit-transform: scaleX(-1) rotate(-45deg);
+  transform: scaleX(-1) rotate(-45deg);
+}
+
+.scroll-prompt .scroll-prompt-shape:after {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@-moz-keyframes slidedown {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    -moz-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+}
+@-webkit-keyframes slidedown {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+}
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    -moz-transform: translate(0, 80px);
+    -ms-transform: translate(0, 80px);
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translate(0, 80px);
+    -ms-transform: translate(0, 80px);
+    -webkit-transform: translate(0, 80px);
+    transform: translate(0, 80px);
+  }
+}
+
+    </style>
+    <div class="scroll-prompt w3-hide-small" id="js_scrollPrompt"><div class="scroll-prompt-shape"></div></div>
+  <div class="w3-display-middle" style="white-space:nowrap; width: 100vw">
+      
+      
+      <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+        
+        
+        
+        .mytext {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          list-style: none;
+          border-bottom: 0;
+        }
+        
+        /*.mytext.hidden {
+          border-bottom: 1px solid #fff;
+        }*/
+        
+        .mytext li {
+          display: inline-block;
+          float: left;
+          font-weight: 700;
+          font-size: 2vw;
+          color: #fff;
+          opacity: 1;
+          transition: all 0.5s ease-in-out;
+          max-width: 5em;
+        }
+        .mytext.hidden li.spaced {
+          padding-left: 0.3em;
+        }
+        .mytext li.spaced {
+          padding-left: 0.5em;
+        }
+        
+        .mytext.hidden li.ghost {
+          opacity: 0;
+          max-width: 0;
+        }
+        .mytext li.mobile {
+          padding-left: 0.5em;
+        }
+    </style>
+    
+    <!--<ul style="width: 1400px"></ul>-->
+    
+    <a href="#about">
+    <ul class="mytext w3-hide-small hidden w3-center w3-padding-large w3-black w3-animate-opacity w3-button">
+      <li>C</li>
+      <li class="ghost">o</li>
+      <li class="ghost">d</li>
+      <li class="ghost">o</li>
+      <li class="ghost">n</li>
+      <li class="spaced">U</li>
+      <li class="ghost">s</li>
+      <li class="ghost">a</li>
+      <li class="ghost">g</li>
+      <li class="ghost">e</li>
+      <li class="spaced">B</li>
+      <li class="ghost">i</li>
+      <li class="ghost">a</li>
+      <li class="ghost">s</li>
+      <li class="spaced">A</li>
+      <li class="ghost">c</li>
+      <li class="ghost">r</li>
+      <li class="ghost">o</li>
+      <li class="ghost">s</li>
+      <li class="ghost">s</li>
+      <li class="spaced">P</li>
+      <li class="ghost">o</li>
+      <li class="ghost">p</li>
+      <li class="ghost">u</li>
+      <li class="ghost">l</li>
+      <li class="ghost">a</li>
+      <li class="ghost">t</li>
+      <li class="ghost">i</li>
+      <li class="ghost">o</li>
+      <li class="ghost">n</li>
+      <li class="ghost">s</li>
+    </ul>
+    
+    <div>
+        <style>
+            .mobile_show {
+              display: none;
+            }
+      
+            @media only screen and (max-width: 500px) {
+              .mobile_show {
+                display: block;
+              }
+            }
+        </style>
+<ul class="mobile_show mytext hidden w3-center w3-padding-large w3-black w3-animate-opacity w3-button">
+    <li>C</li>
+    <li class="mobile">U</li>
+    <li class="mobile">B</li>
+    <li class="mobile">A</li>
+    <li class="mobile">P</li>
+  </ul>
+</div>
+</a>
+     
+      
+      
+      <!--
+    <center><span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-button"><a href="#about" class="w3-button">CUBAP</a></span></center>
+      <center class="whiteText" style="padding-top: 3px;">An Interactive Web Portal for Analyzing Codon Usage Bias Across Populations</center>
+      -->
+      
+      
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABSTRACT</h3>
+  <p class="w3-center"><em>CUBAP: An Interactive Web Portal for Analyzing Codon Usage Bias Across Populations</em></p><br>
+  <p>
+    Although synonymous codon usage does not change the protein primary structure, codon choice significantly impacts translational
+     and transcriptional efficiency, gene expression, the secondary structure of both mRNA and proteins, and has been implicated in
+      various diseases. While codon usage has been widely studied, population-specific differences in codon usage biases remain largely
+      unexplored. Here, we present a web server, https://cubap.byu.edu, to facilitate analyses of codon usage biases across populations
+      (CUBAP). Using data from the 1000 Genomes Project, we calculated codon frequencies, codon aversion, identical codon pairing,
+      co-tRNA codon pairing, ramp sequences, and nucleotide composition including GC content in 17,638 genes. We present comprehensive
+      comparisons of these codon usage biases across 2,504 individuals spanning 26 subpopulations in five superpopulations and 
+      visually depict these differences online using Microsoft Power BI. We found that codon pairing significantly differs between
+      populations in 46% of genes, allowing us to successfully predict the place of origin for African and East Asian individuals
+      using only codon pairing biases with 98.8% and 100% accuracy, respectively. We also performed a case study using CUBAP to 
+      analyze population-specific effects of synonymous variant rs10065172, which is associated with Crohn's disease in European
+      populations but not Japanese or African populations. We propose that a significant bias toward decreased CTG pairing in the
+      immunity related GTPase M (IRGM) gene in East Asian and African populations may contribute to the decreased association
+      of rs10065172 with Crohn's disease within these populations. CUBAP displays the most comprehensive analysis of codon usage 
+      biases across human populations to date. It facilitates in-depth gene-specific and codon-specific visualization that will
+      aid in analyzing candidate genes identified in genome-wide association studies, identifying functional implications of 
+      synonymous variants, predicting population-specific impacts of synonymous variants, and categorizing genetic biases unique to certain populations.
+  </p>
+        <div class="w3-row">
+      <br>
+
+      <div class="w3-row">
+        <br>
+    <a href="https://academic.oup.com/nar/article/48/19/11030/5921303">
+      <button class="w3-button w3-black w3-right w3-section" type="button">
+        READ THE PAPER</button></a>
+      </div>
+      <br><br>
+
+<p class="w3-center w3-hide-small"><b>Populations Included from the 1000 Genomes Project</b></p>
+<table align="center" class="w3-hide-small">
+  <tr>
+    <th> Superpopulation</th>
+    <th> Subpopulation</th>
+    <th> Description</th>
+  </tr>
+  <tr class="Africa">
+    <td rowspan="7" class="AfricaCol">Africa</td>
+    <td>ASW</td>
+    <td>African Ancestry in Southwest US</td>
+  </tr>
+  <tr class="Africa">
+    <td>ACB</td>
+    <td>African Caribbean in Barbados</td>
+  </tr>
+  <tr class="Africa">
+    <td>ESN</td>
+    <td>Esan in Nigeria</td>
+  </tr>
+  <tr class="Africa">
+    <td>GWD</td>
+    <td>Gambian in Western Division, The Gambia</td>
+  </tr>
+  <tr class="Africa">
+    <td>LWK</td>
+    <td>Luhya in Webuye, Kenya</td>
+  </tr>
+  <tr class="Africa">
+    <td>MSL</td>
+    <td>Mende in Sierra Leone</td>
+  </tr>
+  <tr class="Africa">
+    <td>YRI</td>
+    <td>Yoruba in Ibadan, Nigeria</td>
+  </tr>
+  
+  <tr class="America">
+    <td rowspan="4" class="AmericaCol">America</td>
+    <td>CLM</td>
+    <td>Colombian in Medellin, Colombia</td>
+  </tr>
+  <tr class="America">
+    <td>MXL</td>
+    <td>Mexican Ancestry in Los Angeles, California</td>
+  </tr>
+  <tr class="America">
+    <td>PEL</td>
+    <td>Peruvian in Lima, Peru</td>
+  </tr>
+  <tr class="America">
+    <td>PUR</td>
+    <td>Puerto Rican in Puerto Rico</td>
+  </tr>
+
+<tr class="EastAsia">
+    <td rowspan="5" class="EastAsiaCol">East Asia</td>
+    <td>CDX</td>
+    <td>Chinese Dai in Xishuangbanna, China</td>
+  </tr>
+  <tr class="EastAsia">
+    <td>CHB</td>
+    <td>Han Chinese in Bejing, China</td>
+  </tr>
+  <tr class="EastAsia">
+    <td>CHS</td>
+    <td>Southern Han Chinese, China</td>
+  </tr>
+  <tr class="EastAsia">
+    <td>JPT</td>
+    <td>Japanese in Tokyo, Japan</td>
+  </tr>
+  <tr class="EastAsia">
+    <td>KHV</td>
+    <td>Kinh in Ho Chi Minh City, Vietnam</td>
+  </tr>
+  
+  
+  <tr class="Europe">
+    <td rowspan="5" class="EuropeCol">Europe</td>
+    <td>CEU</td>
+    <td>Utah residents with Northern and Western European ancestry</td>
+  </tr>
+  <tr class="Europe">
+    <td>GBR</td>
+    <td>British in England and Scotland</td>
+  </tr>
+  <tr class="Europe">
+    <td>FIN</td>
+    <td>Finnish in Finland</td>
+  </tr>
+  <tr class="Europe">
+    <td>IBS</td>
+    <td>Iberian populations in Spain</td>
+  </tr>
+  <tr class="Europe">
+    <td>TSI</td>
+    <td>Toscani in Italy</td>
+  </tr>
+  
+  
+  <tr class="SouthAsia">
+    <td rowspan="5" class="SouthAsiaCol">South Asia</td>
+    <td>BEB</td>
+    <td>Bengali in Bangladesh</td>
+  </tr>
+  <tr class="SouthAsia">
+    <td>GIH</td>
+    <td>Gujarati Indian in Houston,TX</td>
+  </tr>
+  <tr class="SouthAsia">
+    <td>ITU</td>
+    <td>Indian Telugu in the UK</td>
+  </tr>
+  <tr class="SouthAsia">
+    <td>PJL</td>
+    <td>Punjabi in Lahore,Pakistan</td>
+  </tr>
+  <tr class="SouthAsia">
+    <td>STU</td>
+    <td>Sri Lankan Tamil in the UK</td>
+  </tr>
+ 
+  
+  
+  
+</table>
+
+</div>
+    </div>
+
+<!-- Second Parallax Image with results images gallery -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">RESULTS</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="results">
+  <h3 class="w3-center">RESULTS</h3>
+  <p class="w3-center"><em>What did we find?</em></p></br>
+  <p>A more detailed look at the differences between these specific genes can expand our knowledge of the extent of their fitness and differences. Data such as codon usage bias and codon pairing, both key aspects of protein production, will be extremely useful, especially when studying genes that produce important proteins such as insulin. It has been observed that an organism’s codon bias, codon pairing, and codon aversion are all related to its location in the phylogenetic tree of life. Therefore, a deeper look into codon bias in human populations could lead to novel discoveries regarding human evolution. This data is available on the CUBAP Web Portal, allowing users to identify population-specific codon usage biasess in genes and observe their differences across 26 subpopulations.</p>
+  <br><br>
+  <img src="pairing.png" class="graph">
+  <br>
+  <h4 class="thick">Identical Codon Pairing</h4>
+  <p>ANOVA: F = 45.76828, p = 2.73x10<sup>-183</sup><br>The mean total number of identical codon pairs per individual in each population.</p>
+  <br><br><br><br>
+  <img src="co_pairing.png" class="graph">
+  <br>
+  <h4 class="thick">Co-tRNA Codon Pairing</h4>
+  <p>ANOVA: F = 61.88092647, p = 4.7x10<sup>-239</sup><br>The mean total number of co-tRNA codon pairs per individual in each population.</p>
+  <br><br><br><br>
+  <img src="aversion.png" class="graph">
+  <br>
+  <h4 class="thick">Codon Aversion</h4>
+  <p>ANOVA: F = 9.599947, p = 4.34x10<sup>-35</sup><br>The mean total number of codons averted for individuals in each population.</p>
+  <br><br><br><br>
+  <img src="ramps.png" class="graph">
+  <br>
+  <h4 class="thick">Ramp Sequences</h4>
+  <p>ANOVA: F = 4.693489, p = 1.56x10<sup>-13</sup><br>A ramp sequence is a region of rare codons at the beginning of a gene. These rare codons are translated slowly which allows for proper initation of translation and further accuracy during elongation.</p>
+  <br><br><br><br>
+  <!--<img src="CR1_codon_bias.png" class="graph">
+  <br>
+  <h4 class="thick">Affected Codon Usage Bias in Specific Amino Acids</h4>
+  <p>A statistically significant 85% of individuals of African origin possess a specific mutation in the CR1 gene that reduces susceptibility to the contraction of malaria (Barreiro et al., 2008). Here is shown the percent usage of each codon in encoding the specific amino acid. Variants of CR1 (NP_000564.2) that are found almost exclusively in African populations are marked in red. Variants predominantly found in other populations are mark in blue.</p>
+  <br><br><br><br>
+  <img src="AGA_pop.png" class="graph">
+  <br>
+  <h4 class="thick">Codon Frequency Across Populations in CR1: AGA</h4>
+    <p>ANOVA: F = 1593.987, p = 0.0<br>Here it can be seen that the frequency of the codon AGA is used significantly less in samples of African origin.</p>
+    <br><br><br><br>
+  <img src="GGA_pop.png" class="graph">
+  <br>
+  <h4 class="thick">Codon Frequency Across Populations in CR1: GGA</h4>
+  <p>ANOVA: F = 1187.064, p = 0.0<br>Here it can be seen that the frequency of the codon GGA is used significantly more in samples of African origin.</p>
+<br><br><br><br>
+  <img src="CR1_variants.png" class="graph">
+  <br>
+  <h4 class="thick">Origin of Variants in CR1 Gene</h4>
+    <p>Here is shown the most common variants of the gene CR1 (NP_000564.2) and the populations from which they originate. In CR1 the most prevalent variants are found in non-African populations. There is however a unique and rather common variant that is almost exclusively found in African samples. Additionally, it can also be noted that the there is a plethora of unique CR1 variants found in the African population, while non-African populations mainly have one of maybe four common variants.</p>
+<br><br><br><br>
+  <img src="cub_HCN2.png" class="graph">
+  <br>
+  <h4 class="thick">Extreme Codon Usage Bias in HCN2</h4>
+    <p>Extreme bias in codon usage has been found to increases tranlsational efficiency. Extreme codon bias is often found in genes that are highly expressed, encode longer proteins, or proteins that have a very important primary structure. HCN2 is a gene that encodes a protein that participates in the generation of native pacemaker activity in the heart and brain (www.genecards.org).</p>
+<br><br><br><br>-->
+</div>
+  <!--
+  <div class="grid">
+  <div class="one zoom">
+      <img src="ScreenShot1.png" class="gallery__img">
+      -<div class="hovertext">
+        <div class="mytext">John Doe</div>
+        </div>
+  </div>
+</div>
+<div class="w3-center">
+  <div class="two zoom">
+      <img src="ScreenShot2.png" class="gallery__img">
+  </div>
+  <div class="three zoom">
+      <img src="ScreenShot3.png" class="gallery__img">
+  </div>
+  <div class="four zoom">
+      <img src="ScreenShot4.png" class="gallery__img">
+  </div>
+  <div class="five zoom">
+      <img src="ScreenShot5.png" class="gallery__img">
+  </div>
+</div>
+  -->
+
+  <!-- Fourth Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="contact">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">DATA</span>
+  </div>
+</div>
+<div class="w3-content w3-container w3-padding-64" id="data">
+  <h3 class="w3-center">Data</h3>
+  <p class="w3-center"><em>Download the original data files we generated from the 1000 Genomes Project</em></p></br>
+
+  <h5>Codon Frequency and Codon Aversion Data Files</h5>
+  <div style="margin-left: 1em;">
+  <a href="DataFiles/allGenesAllSamples_with_alleles_no_samples_indexed.csv" download="CodonFrequencyData.csv">CodonFrequencyData.csv</a><br>
+  <a href="DataFiles/indexPopKey2_melted.csv" download="CodonFrequencyPopulationKey.csv">CodonFrequencyPopulationKey.csv</a><br><br>
+</div>
+  <h5>Identical Codon Pairing Data Files</h5>
+  <div style="margin-left: 1em;">
+  <a href="DataFiles/allGenesAllSamples_i_indexed_no_samples.csv" download="IdenticalCodonPairingData.csv">IdenticalCodonPairingData.csv</a><br>
+  <a href="DataFiles/indexPopKey_i_melted.csv" download="IdenticalCodonPairingPopulationKey.csv">IdenticalCodonPairingPopulationKey.csv</a><br><br>
+</div>
+  <h5>Co-tRNA Codon Pairing Data Files</h5>
+  <div style="margin-left: 1em;">
+  <a href="DataFiles/allGenesAllSamples_aa_indexed_no_samples.csv" download="Co-tRNACodonPairingData.csv">Co-tRNACodonPairingData.csv</a><br>
+  <a href="DataFiles/indexPopKey_aa_melted.csv" download="Co-tRNACodonPairingPopulationKey.csv">Co-tRNACodonPairingPopulationKey.csv</a><br><br>
+</div>
+  <h5>Ramp Sequence Data File</h5>
+  <div style="margin-left: 1em;">
+  <a href="DataFiles/allRampCharts_corrected.csv" download="RampSequenceData.csv">RampSequenceData.csv</a><br><br>
+</div>
+  <h5>Nucleotide Composition Data File</h5>
+  <div style="margin-left: 1em;">
+  <a href="DataFiles/baseCountAlleles_no_samples.csv" download="NucleotideCompositionData.csv">NucleotideCompositionData.csv</a><br>
+  <a href="DataFiles/indexKeyBaseCount_from_complete.csv" download="NucleotideCompositionPopulationKey.csv">NucleotideCompositionPopulationKey.csv</a><br><br>
+</div>
+  <h5>Python Scripts</h5>
+  <div style="margin-left: 1em;">
+  <a href="https://github.com/kauwelab/cubap">Our Github</a>
+</div>
+  </div>
+
+
+
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity-min">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+<style>
+    #right { display: none; }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+$(function scroller() {
+          var text = $(".mytext");
+          $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+        
+            if (scroll >= 25) {
+              text.removeClass("hidden");
+            } else {
+              text.addClass("hidden");
+            }
+          });
+        });
+
+
+// change button text
+function change() {
+    if (document.getElementById("switchButton").innerHTML == "CODON USAGE BIAS") {
+        document.getElementById("switchButton").innerHTML = "CODON PAIRING BIAS";
+    }
+    else
+    {
+        document.getElementById("switchButton").innerHTML = "CODON USAGE BIAS";
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+
+</script>
+</body>
+</html>

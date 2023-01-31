@@ -1,0 +1,23 @@
+{
+  "@odata.context": "http://wabi-west-us-redirect.analysis.windows.net/v1.0/myorg/$metadata#reports",
+  "value": [
+    {
+      "id": "06513a13-1824-4a16-85c5-8b9792de5543",
+      "reportType": "PowerBIReport",
+      "name": "totals",
+      "webUrl": "https://app.powerbi.com/reports/06513a13-1824-4a16-85c5-8b9792de5543",
+      "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=06513a13-1824-4a16-85c5-8b9792de5543&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVdFU1QtVVMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQifQ%3d%3d",
+      "isOwnedByMe": true,
+      "datasetId": "e8ffe2e7-f62b-4634-bfc8-6e954c97b035"
+    },
+    {
+      "id": "910c081e-c13d-4954-bd72-9cac1646a510",
+      "reportType": "PowerBIReport",
+      "name": "CUBAP",
+      "webUrl": "https://app.powerbi.com/reports/910c081e-c13d-4954-bd72-9cac1646a510",
+      "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=910c081e-c13d-4954-bd72-9cac1646a510&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVdFU1QtVVMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQifQ%3d%3d",
+      "isOwnedByMe": true,
+      "datasetId": "19872c16-b400-4171-8f61-f36046a31070"
+    }
+  ]
+}
