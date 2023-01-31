@@ -1,0 +1,2 @@
+# Codon Usage Bias Across Populations
+This is the GitHub repo for the (CUBAP)[https://cubap.byu.edu/] webtool and (publication)[https://academic.oup.com/nar/article/48/19/11030/5921303?login=true]. It includes code for the analyses in the paper as well as the code for the website. The Power BI report files and raw data files are not included here due to size limitations--they can be accessed from the CUBAP website.
